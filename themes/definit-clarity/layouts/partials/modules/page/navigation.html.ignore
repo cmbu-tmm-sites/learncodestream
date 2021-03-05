@@ -1,0 +1,27 @@
+{{ if .IsPage }}
+  {{ if or ( .NextInSection ) ( .PrevInSection ) }}
+    <nav class="clarity-page-prev-next">
+    {{/*  <nav><ul class="pager">  */}}
+    {{ if .PrevInSection }}
+        {{/*  <li class="previous">  */}}
+          <div class="clr-nav-previous">
+            <a href="{{ .PrevInSection.Permalink }}" title="{{ .PrevInSection.Title }}" class="btn btn-outline">
+            {{ i18n "previous" }}
+            </a>
+          </div>
+        {{/*  </li>  */}}
+    {{end}}
+
+    {{ if .NextInSection }}
+      {{/*  <li class="next">  */}}
+        <div class="clr-nav-next">
+          <a href="{{ .NextInSection.Permalink }}" title="{{ .NextInSection.Title }}" class="btn btn-outline">
+              {{ i18n "next" }}
+          </a>
+        </div>
+      {{/*  </li>  */}}
+    {{end}}
+    {{/*  </ul> </nav>  */}}
+    </nav>
+  {{ end }}
+{{ end }}

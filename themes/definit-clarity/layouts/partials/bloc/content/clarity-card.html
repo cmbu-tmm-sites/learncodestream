@@ -1,0 +1,35 @@
+<div class="clr-col-12 clr-col-sm-12 clr-col-md-12 clr-col-lg-6 clr-col-xl-6">
+    <div class="card">
+        <div class="card-header" style="height: 74px">
+            <a href="{{ .Permalink }}">{{ if .IsPage }}{{ if .Draft }}{{ .Site.Data.Strings.draft }} :: {{ end }}{{ end }}{{ .Title }}</a>
+        </div>
+        <div class="card-block">
+            <div class="card-media-block">
+                <div class="card-media-desciption clr-card-authors">
+                    <span class="card-media-title clr-card-authors">
+                        <div class="clr-card-authors">
+                        {{- range .Params.authors }}
+                            {{- with $.Site.GetPage "taxonomyTerm" (printf "authors/%s" (urlize .)) }}<img src="{{ .Params.photo }}" alt="" class="img-author" />Written by <a href="{{ .Permalink }}" class="">{{ .Params.name }}</a>{{ end }}
+                        {{ end }}
+                        on {{ .Date.Format .Site.Data.Formats.date }}
+                        </div>
+                        <div class="clr-card-authors">
+                        Published under {{ if isset .Params "categories"}}{{ $links := apply .Params.categories "partial" "bloc/content/clarity-card-category-link" "." }}{{ $clean := apply $links "chomp" "." }}{{ delimit $clean ", " " and "}}{{ end }}
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="card-block">
+            <div class="card-text" style="max-height: 200px; min-height: 200px; overflow: hidden;">
+                    {{ if .Params.featured_image }}
+                        <img src="{{ .Params.featured_image }}" class="clr-card-featured-image">
+                    {{ end }}
+                    {{ .Render "summary" }}
+            </div>
+        </div>
+        <div class="card-footer">
+            <a class="card-link" href="{{ .Permalink }}">More</a>
+        </div>
+    </div>
+</div>

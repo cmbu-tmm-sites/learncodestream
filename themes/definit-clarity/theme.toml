@@ -1,0 +1,15 @@
+name = "DefinIT Clarity"
+description = "A hugo theme using VMware Clarity"
+homepage = "https://github.com/sammcgeown/definit-clarity-hugo-theme"
+tags = ["Blog"]
+features = ["Blog"]
+min_version = 0.44
+
+[author]
+    name = "Sam McGeown"
+    homepage = "https://www.definit.co.uk"
+
+[original]
+    author =  "Göran Svensson"
+    homepage = "https://github.com/appernetic/hugo-bootstrap-premium"
+    repo = "https://github.com/appernetic/hugo-bootstrap-premium/"

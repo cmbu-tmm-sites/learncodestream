@@ -1,0 +1,23 @@
+<div class="clarity-prev-next col-xs-12 col-sm-12 col-md-12 col-lg-12">
+{{/*  {{ partial "modules/page/navigation.html" . }}  */}}
+{{ if .IsPage }}
+      {{ if or ( .NextInSection ) ( .PrevInSection ) }}
+      <nav class="clarity-page-prev-next">
+            {{ if .PrevInSection }}
+            <div class="clr-nav-previous">
+                  <a href="{{ .PrevInSection.Permalink }}" title="{{ .PrevInSection.Title }}" class="btn btn-sm btn-outline">
+                  {{ i18n "previous" }}
+                  </a>
+            </div>
+            {{end}}
+            {{ if .NextInSection }}
+            <div class="clr-nav-next">
+                  <a href="{{ .NextInSection.Permalink }}" title="{{ .NextInSection.Title }}" class="btn btn-sm btn-outline">
+                  {{ i18n "next" }}
+                  </a>
+            </div>
+            {{end}}
+      </nav>
+      {{ end }}
+{{ end }}
+</div>

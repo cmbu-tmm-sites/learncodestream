@@ -1,0 +1,36 @@
+{{ partial "html-head.html" . }}
+<div class="content-container">
+  <div class="content-area">
+                <img src="{{ .Params.photo }}" alt="{{ .Params.name}}" width=200px class="clarityAuthorProfile"/>
+                <h1>{{ .Params.name }}</h1>
+                {{ .Content }}
+                {{ with .Params.twitter }}
+                  <p>
+                    <a href="https://twitter.com/{{ substr . 1 }}">
+                      Follow {{ $.Params.name }} on Twitter
+                    </a>
+                  </p>
+                {{ end }}
+                
+                <h3>All posts by {{ .Params.name }}</h3>
+                {{/*  <ul>
+                {{ range .Data.Pages }}
+                    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                {{ end }}
+                </ul>  */}}
+
+                <div class="clr-row">
+                {{ range $index, $foo := .Paginator.Pages }}
+                  {{ partial "bloc/content/clarity-card.html" . }}
+                {{ end }}
+                </div>
+                {{ partial "bloc/content/pagination.html" . }}
+
+  </div><!-- /.content-area -->
+  <div class="content-area">
+  {{ if .Site.Params.clarityNavSidebar }}
+  </div>
+  {{ partial "bloc/content/clarity-navigation.html" . }}
+  {{ end }}
+</div><!-- /.content-container -->
+{{ partial "html-foot.html" . }}

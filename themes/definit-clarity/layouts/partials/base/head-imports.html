@@ -1,0 +1,21 @@
+{{ "<!--[if lt IE 9]>" | safeHTML }}
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+{{ "<![endif]-->" | safeHTML }}
+
+
+<script src="/js/clr-1.0/clr-icons.min.js"></script>
+<script src="/js/clr-1.0/custom-elements.min.js"></script>
+
+<!-- Bootstrap core CSS -->
+<!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"> -->
+
+<!-- Custom styles for this template -->
+{{ if .Site.Params.clarityDarkTheme }}
+<link href="/css/clr-1.0/clr-ui-dark.css" rel="stylesheet">
+{{ else }}
+<link href="/css/clr-1.0/clr-ui.css" rel="stylesheet">
+{{ end }}
+<link href="/css/clr-1.0/clr-icons.min.css" rel="stylesheet">
+<link href="/css/definit-clarity.css" rel="stylesheet">
+<link href="{{ "css/lightbox.min.css" | relURL }}" rel="stylesheet">

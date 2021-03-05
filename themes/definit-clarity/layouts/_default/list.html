@@ -1,0 +1,16 @@
+{{ partial "html-head.html" . }}
+<div class="content-container">
+  <div class="content-area">
+    {{ partial "bloc/content/h1-title.html" . }}
+    <div class="clr-row">
+    {{ range $index, $foo := .Paginator.Pages }}
+      {{ partial "bloc/content/clarity-card.html" . }}
+    {{ end }}
+    </div>
+    {{ partial "bloc/content/pagination.html" . }}
+  </div>
+{{ if .Site.Params.clarityNavSidebar }}
+  {{ partial "bloc/content/clarity-navigation.html" . }}
+{{ end }}
+</div>
+{{ partial "html-foot.html" . }}

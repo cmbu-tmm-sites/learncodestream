@@ -1,0 +1,19 @@
+{{ partial "html-head.html" . }}
+<div class="content-container">
+    <div class="content-area col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <div class="clr-row">
+            <h1>Authors</h1>
+            <ul>
+            {{ range .Data.Pages }}
+                <li><a href="{{ .Permalink }}">{{ .Params.name }}</a></li>
+            {{ end }}
+            </ul>
+        </div><!--./card-columns-->
+    </div><!-- /.content-area -->
+    {{ if .Site.Params.clarityNavSidebar }}
+    <nav class="sidenav">
+        {{ partial "bloc/content/clarity-navigation.html" . }}
+    </nav>
+    {{ end }}
+ </div><!-- /.content-container -->
+ {{ partial "html-foot.html" . }}

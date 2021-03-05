@@ -1,0 +1,6 @@
+{{ if isset .Params "tags"}}
+ Tags: 
+  {{ range .Params.tags }}
+  <a class="clr-tags" href="{{ "tag/" | absLangURL }}{{ . | urlize }}">#{{ . }}</a>
+  {{ end }}
+{{ end }}

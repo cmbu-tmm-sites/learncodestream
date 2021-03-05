@@ -1,0 +1,25 @@
+<div class="metas">
+  {{ if .IsPage }}
+  <span class="clr-card-authors">
+      <div class="clr-card-authors">
+        {{- range .Params.authors }}
+            {{- with $.Site.GetPage "taxonomyTerm" (printf "authors/%s" (urlize .)) }}<img src="{{ .Params.photo }}" alt="" class="img-author" />Written by <a href="{{ .Permalink }}" class="">{{ .Params.name }}</a>{{ end }}
+        {{ end }}
+        on {{ .Date.Format .Site.Data.Formats.date }}
+        &middot; {{ i18n "readinabout" . }} ({{ i18n "words" . }})
+      </div>
+      <div class="clr-card-authors">
+        Published under {{ if isset .Params "categories"}}{{ $links := apply .Params.categories "partial" "bloc/content/clarity-card-category-link" "." }}{{ $clean := apply $links "chomp" "." }}{{ delimit $clean ", " " and "}}{{ end }}
+      </div>
+      <div class="clr-card-authors">
+        {{ if isset .Params "tags"}}
+          Tags: 
+          {{ range .Params.tags }}
+            <a class="clr-tags" href="{{ "tag/" | absLangURL }}{{ . | urlize }}">#{{ . }}</a>
+          {{ end }}
+        {{ end }}
+       </div>
+  </span>
+  {{ end }}
+</div>
+<br clear=all />

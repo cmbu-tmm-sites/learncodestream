@@ -1,0 +1,98 @@
+baseURL = "https://learncodestream.github.io"
+languageCode = "en-gb"
+title = "Learn Code Stream"
+theme = "definit-clarity"
+
+# Code Highlighting
+pygmentsCodeFences = true
+pygmentsUseClasses = false
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = false
+    noClasses = true
+    style = "fruity"
+    tabWidth = 4
+
+[taxonomies]
+  author = "authors"
+  tag = "tags"
+  category = "categories"
+  series = "series"
+
+[permalinks]
+  posts = "/:year/:month/:slug"
+  tags = "/tag/:slug/"
+  categories = "/category/:slug/"
+
+# main menu
+[[menu.main]]
+    name = "Home"
+    identifier = "home"
+    url = "/"
+    weight = 10
+[[menu.main]]
+    name = "GitHub"
+    identifier = "github"
+    url = "https://www.github.com/sammcgeown"
+    weight = 100
+[[menu.main]]
+    name = "RSS"
+    identifier = "rss"
+    url = "index.xml"
+    weight = 110
+
+[params.social]
+  Github        = "sammcgeown"
+  Email         = "sam@mcgeown.co.uk"
+  Twitter       = "sammcgeown"
+
+[params]
+  # Use the dark clarity theme
+  clarityDarkTheme    = false
+  # Select the clarity header colour (1-7)
+  clarityHeaderColour = 6
+  # Show a sidebar menu
+  clarityNavSidebar = true
+  clarityNavCategories = true
+  clarityNavTags = true
+  clarityNavLatest = false
+  # Show a site-wide info alert
+  claritySiteInfoText = ""
+  # Branding
+  clarityHeaderImage = "/images/logos/definit-logo.png"
+  clarityFavIcon = "/images/favicon-16x16.png"
+  # RSS
+  clarityShowRss = true
+
+  ## Posts
+  # Show Post Tags
+  clarityShowPostTags = true
+
+  # Text for the top menu link, which goes the root URL for the site.
+  # Default (if omitted) is "Home".
+  home = "home"
+  # Select a syntax highight.
+  # Check the static/css/highlight directory for options.
+
+
+  # Google Analytics.
+  googleAnalytics = "UA-4368767-1"
+
+  # Social accounts
+  github = "sammcgeown" # Your Github profile ID
+  bitbucket = "" # Your Bitbucket profile ID
+  linkedin = "" # Your LinkedIn profile ID (from public URL)
+  googleplus = "" # Your Google+ profile ID
+  facebook = "" # Your Facebook profile ID
+  twitter = "sammcgeown" # Your Twitter profile ID
+  youtube = ""  # Your Youtube channel ID
+  flattr = ""  # populate with your flattr uid

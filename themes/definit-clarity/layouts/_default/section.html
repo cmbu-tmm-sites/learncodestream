@@ -1,0 +1,17 @@
+<div class="content-container">
+    <div class="content-area">
+      <header>
+       {{ partial "bloc/content/h1-title.html" . }}
+      </header>
+      {{ range $index, $foo := .Paginator.Pages  }}
+      {{ .Render "section.li" }}
+      {{ end }}
+      {{ partial "bloc/content/pagination.html" . }}
+    </div><!-- /.content-area -->
+    {{ if .Site.Params.clarityNavSidebar }}
+    <nav class="sidenav">
+      {{ partial "bloc/content/clarity-navigation.html" . }}
+    </nav>
+    {{ end }}
+  </div><!-- /.content-container -->
+{{ partial "html-foot.html" . }}

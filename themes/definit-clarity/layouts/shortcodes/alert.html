@@ -1,0 +1,16 @@
+{{/*  type=danger/warning/info/success 
+{{< alert type="info" text="This is an info text box!">}}
+{{< alert type="danger" text="This is an danger text box!">}}
+{{< alert type="warning" text="This is an warning text box!">}}
+{{< alert type="success" text="This is an success text box!">}}
+  */}}
+<div class="alert alert-{{(.Get "type")}}" role="alert">
+    <div class="alert-items">
+        <div class="alert-item static">
+            <div class="alert-icon-wrapper">
+                <clr-icon class="alert-icon" shape="info-circle"></clr-icon>
+            </div>
+            <span class="alert-text">{{(.Get "text")}}</span>
+        </div>
+    </div>
+</div>

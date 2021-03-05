@@ -1,0 +1,42 @@
+<!-- <section class="nav-group collapsible">
+    <input id="LatestPosts" type="checkbox">
+    <label for="LatestPosts">{{ i18n "latestposts" }}</label>
+    <ul class="nav-list">
+      {{ range first 5 (where (where .Site.Pages "Type" "post") "IsPage" true) }}
+      <li><a class="nav-link" href="{{ .Permalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    </ul>
+  </section> -->
+<nav class="sidenav clr-col-12 clr-col-sm-12 clr-col-md-12 clr-col-lg-6 clr-col-xl-6">
+  <section class="sidenav-content">
+    <section class="nav-group collapsible">
+      <input id="Categories" type="checkbox">
+      <label for="Categories">Categories</label>
+      <ul class="nav-list">
+    {{ range $key, $value := .Site.Taxonomies.categories }}
+        <li><a href="/category/{{ $key | urlize  }}" class="nav-link">{{ $key | upper }} <span class="badge badge-1">{{ .Count }}</span></a></li>
+    {{ end }}
+      </ul>
+    </section>
+    <section class="nav-group collapsible">
+      <input id="Tags" type="checkbox">
+      <label for="Tags">Tags (Top 10)</label>
+      <ul class="nav-list">
+      {{ $tags := $.Site.Taxonomies.tags.ByCount }}
+          {{ $v1 := where $tags "Count" ">=" 5 }}
+          {{ $v2 := where $v1 "Term" "not in" (slice "hugo" "tags" "rss") }}
+          {{ range first 10 $v2 }}
+          {{ if .Term }}
+          {{ $tagURL := printf "tag/%s" .Term | relURL }}
+          <li><a href="{{ $tagURL }}" class="nav-link">{{ .Term | upper }} <span class="badge badge-1">{{ .Count }}</span></a></li>
+          {{ end }}
+      {{ end }}
+    </section>
+    <section class="nav-group">
+        <label for="Sponsors">Sponsors</label>
+        <ul class="nav-list">
+      {{ partial "bloc/content/advertisements.html" }}
+      </ul>
+    </section>
+  </section>
+</nav>

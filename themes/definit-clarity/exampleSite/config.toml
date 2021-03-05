@@ -1,0 +1,70 @@
+baseURL = "https://www.definit.co.uk"
+languageCode = "en-gb"
+title = "DefinIT"
+theme = "definit"
+
+[taxonomies]
+  author = "authors"
+  tag = "tags"
+  category = "categories"
+  series = "series"
+
+[permalinks]
+  posts = "/:year/:month/:slug"
+  tags = "/tag/:slug/"
+  categories = "/category/:slug/"
+
+# main menu
+[[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 10
+[[menu.main]]
+    name = "GitHub"
+    url = "https://www.github.com/sammcgeown"
+    weight = 100
+
+[params.social]
+  Github        = "sammcgeown"
+  Email         = "sam@mcgeown.co.uk"
+  Twitter       = "sammcgeown"
+
+[params]
+  # Use the dark clarity theme
+  clarityDarkTheme    = true
+  # Select the clarity header colour (1-7)
+  clarityHeaderColour = 6
+  # Show a sidebar menu
+  clarityNavSidebar = true
+  clarityNavCategories = true
+  clarityNavTags = true
+  clarityNavLatest = false
+  # Show a site-wide info alert
+  claritySiteInfoText = ""
+  # Branding
+  clarityHeaderImage = "/images/logos/definit-logo.png"
+  clarityFavIcon = "/images/favicon-16x16.png"
+
+  ## Posts
+  # Show Post Tags
+  clarityShowPostTags = true
+
+  # Text for the top menu link, which goes the root URL for the site.
+  # Default (if omitted) is "Home".
+  home = "home"
+  # Select a syntax highight.
+  # Check the static/css/highlight directory for options.
+  highlight = "default"
+
+  # Google Analytics.
+  googleAnalytics = "GA-ID"
+
+  # Social accounts
+  github = "sammcgeown" # Your Github profile ID
+  bitbucket = "" # Your Bitbucket profile ID
+  linkedin = "" # Your LinkedIn profile ID (from public URL)
+  googleplus = "" # Your Google+ profile ID
+  facebook = "" # Your Facebook profile ID
+  twitter = "sammcgeown" # Your Twitter profile ID
+  youtube = ""  # Your Youtube channel ID
+  flattr = ""  # populate with your flattr uid

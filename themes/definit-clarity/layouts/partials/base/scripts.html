@@ -1,0 +1,22 @@
+
+{{ .Scratch.Add "js" (slice (resources.Get "js/highlight.pack.js"))}}
+{{ .Scratch.Add "js" (slice (resources.Get "js/site.js"))}}
+
+{{ with .Site.Params.googleAnalytics }}
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ . }}');
+</script>
+
+{{ end }}
+
+{{ range .Site.Params.customJS }}
+    {{ $.Scratch.Add "js" (slice (resources.Get .))}}
+{{ end }}
+
+<script src="{{ "js/lightbox-plus-jquery.min.js" | relURL }}"></script>

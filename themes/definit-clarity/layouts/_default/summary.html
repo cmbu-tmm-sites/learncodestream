@@ -1,0 +1,8 @@
+<!-- {{ partial "bloc/content/summary.html" . }} -->
+{{ if .IsPage }}
+  {{ if .Description }}
+    {{ .Description }}
+  {{ else }}
+    {{ .Summary }}
+  {{ end }}
+{{ end }}

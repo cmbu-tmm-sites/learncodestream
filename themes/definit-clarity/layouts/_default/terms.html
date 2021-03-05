@@ -1,0 +1,23 @@
+{{ partial "html-head.html" . }}
+<div class="content-container">
+    <div class="content-area">
+      {{ partial "bloc/content/h1-title.html" . }}
+      <nav>
+        <ul class="nav-list" style="column-count: 3;">
+        {{ $baseurl := .Site.BaseURL }}
+        {{ $data := .Data }}
+        {{ range $key,$value := .Data.Terms.ByCount }}
+        <li>
+          <a href="{{ $data.Plural | relLangURL }}/{{ $value.Name | urlize }}" class="nav-link">{{ $value.Name }} <span class="badge badge-1">{{ $value.Count }}</span></a>
+        </li>
+        {{ end }}
+        </ul>
+      </nav>
+    </div>
+  {{ if .Site.Params.clarityNavSidebar }}
+    <nav class="sidenav">
+      {{ partial "bloc/content/clarity-navigation.html" . }}
+    </nav>
+  {{ end }}
+  </div>
+{{ partial "html-foot.html" . }}
