@@ -1,3 +1,4 @@
 ---
-weight: 600
+title: "Configure"
+weight: 700
 ---

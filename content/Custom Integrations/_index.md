@@ -1,3 +1,4 @@
 ---
-weight: 500
+title: "Custom Integrations"
+weight: 600
 ---

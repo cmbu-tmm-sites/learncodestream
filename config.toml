@@ -3,14 +3,12 @@ languageCode = "en-gb"
 title = "Learn Code Stream"
 theme = "hugo-geekdoc"
 
-pluralizeListTitles = false
-
-# Geekdoc required configuration
+# Required to get well formatted code blocks
 pygmentsUseClasses = true
 pygmentsCodeFences = true
 disablePathToLower = true
+enableGitInfo = true
 
-# Needed for mermaid shortcodes
 [markup]
   [markup.goldmark.renderer]
     # Needed for mermaid shortcode
@@ -18,3 +16,5 @@ disablePathToLower = true
   [markup.tableOfContents]
     startLevel = 1
     endLevel = 9
+[params]
+    geekdocLogo = "images/vra-code-stream-logo.png"
