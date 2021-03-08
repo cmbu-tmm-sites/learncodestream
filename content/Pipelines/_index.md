@@ -1,6 +1,7 @@
 ---
 title: "Pipelines"
 weight: 500
+
 ---
 A Pipeline is the primary mechanism for sequencing all the tasks that need to be performed, and is composed of one or more Stage, with one or more tasks in each stage. When editing a Pipeline there are four tabs to configure:
 
@@ -25,15 +26,30 @@ Note: You will need to configure the pipeline Inputs with the Git auto-inject pa
 ![Pipeline Input Configuration](images/pipeline-input-config.png)
 {{< /tab >}}
 {{< tab "Model" >}}
-- A [Stage](/Pipelines/Stages) is an encapsulation mechanism for tasks and are used for grouping the individual task execution statuses and results. 
+The Model tab is where you configure the Stages and Tasks of the pipeline - it's where you spend most of your time when creating and editing pipelines.
 
+- A [Stage](/Pipelines/Stages) is an encapsulation mechanism for tasks and are used for grouping the individual task execution statuses and results. 
 - A [Task](/Pipelines/Tasks) performs individual actions based on its type and configuration.  Tasks can deploy [VMware Cloud Templates](Tasks/cloudtemplate), and perform actions on configured endpoints, or more generic tasks such as prompting for user interations with [User Operation](/User-Operations), polling a 3rd party data source with the [Poll](/Pipelines/Tasks/poll/) task, or even perform a REST call.
- {{< /tab >}}
+
+![Pipeline Model Configuration](images/pipeline-model-config.png)
+{{< /tab >}}
 {{< tab "Output" >}} 
 Outputs can be mapped to values produced by tasks in a pipeline and can be useful when you're nesting pipelines using the [Pipeline task](/Pipelines/Tasks/pipeline) to return the results to the parent pipeline.
+
 ![Pipeline Output Config](images/pipeline-output-config.png)
 {{< /tab >}}
 {{< /tabs >}}
+
+## Variables in Pipelines
+Most configurable fields within a Pipeline can also use [Variables], references to Input parameters, the output of other tasks or general pipeline properties by using a reference.
+
+These can be accessed using by typing `$`, which will bring up the auto-completion:
+![Reference auto-completion](images/pipeline-references.gif)
+
+Referring back to previous tasks is done using a heirarchy that matches the structure of the pipeline, for example: `${Build Stage.Build Task.output.exports.variableName}` would refer to the value of a variable called `variableName` that was exported from a task called `Build Task` in the stage `Build Stage`.
+
+Tasks return their output as JSON, and it's often useful to look at a previously executed task to find the correct path to an output variable - if you look at the [Execution]() of a Pipeline and examine the task details, you can click "View Output JSON" and use the "Path finder" option to discover the correct path:
+![Find the correct output path](images/pipeline-find-path.gif)
 
 
 ### More
