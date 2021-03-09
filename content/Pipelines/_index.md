@@ -44,7 +44,8 @@ Outputs can be mapped to values produced by tasks in a pipeline and can be usefu
 Most configurable fields within a Pipeline can also use [Variables], references to Input parameters, the output of other tasks or general pipeline properties by using a reference.
 
 These can be accessed using by typing `$`, which will bring up the auto-completion:
-![Reference auto-completion](images/pipeline-references.gif)
+<!-- ![Reference auto-completion](images/pipeline-references.gif) -->
+{{< img src="/images/pipeline-references.gif" alt="Reference auto-completion" >}}
 
 Referring back to previous tasks is done using a heirarchy that matches the structure of the pipeline, for example: `${Build Stage.Build Task.output.exports.variableName}` would refer to the value of a variable called `variableName` that was exported from a task called `Build Task` in the stage `Build Stage`.
 

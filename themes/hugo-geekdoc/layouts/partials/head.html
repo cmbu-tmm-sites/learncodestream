@@ -46,6 +46,8 @@
 <link rel="preload" href="{{ index .Site.Data.assets "custom.css" | relURL }}" as="style">
 <link rel="stylesheet" href="{{ index .Site.Data.assets "custom.css" | relURL }}" media="all">
 
+<link href="{{ "/lightbox.min.css" | relURL }}" rel="stylesheet">
+
 {{ with .OutputFormats.Get "rss" -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
