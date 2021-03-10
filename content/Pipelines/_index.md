@@ -3,13 +3,24 @@ title: "Pipelines"
 weight: 500
 
 ---
-A Pipeline is the primary mechanism for sequencing all the tasks that need to be performed, and is composed of one or more Stage, with one or more tasks in each stage. When editing a Pipeline there are four tabs to configure:
+A Pipeline is the primary mechanism for sequencing all the tasks that need to be performed, and is composed of one or more Stage, with one or more tasks in each stage.
+
+## General Pipeline Settings
+
+The pipeline settings allow you to set the pipeline name, concurrency, description, icon and tags.{{<hint info>}}Being able to change the concurrency of the pipeline is often useful if you're using shared resources that either don't have the capcity to host multiple running executions, or there are resources that cannot be shared{{</hint>}}
+{{< img src="/images/pipeline-general-settings.png" alt="Pipeline general settings" >}}
+
+## Pipeline configuration
+
+When editing a Pipeline there are four tabs to configure:
 
 {{< tabs "pipelineConfig" >}}
 {{< tab "Workspace" >}} 
 The workspace tab configures the environment in which the pipeline runs
 * **Host** specifies a [Docker endpoint](/Configure/Endpoints/docker) on which [CI tasks](/Pipelines/Tasks/ci) and [Custom Integrations](/Custom-Integrations) will execute
-* **Builder image URL** configures the container image that will be used for CI tasks or Custom Integrations. You can specify using the just an official image (e.g. `python`), the image and a tag (e.g. `python:3.10.0a6-alpine`) or a full URL (e.g. `projects.registry.vmware.com/antrea/prom-prometheus:v2.19.3`)
+* **Builder image URL** configures the container image that will be used for CI tasks or Custom Integrations. You can specify using the just an official image (e.g. `python`), the image and a tag (e.g. `python:3.10.0a6-alpine`) or a full URL (e.g. `projects.registry.vmware.com/antrea/prom-prometheus:v2.19.3`){{< hint warning >}}
+The container image can be almost any image but it needs to have `wget` or `curl` in order to download and install the Code Stream CI Agent, which is installed when the container is spun up. 
+{{< /hint >}}
 * **Image Registry** selects the [Docker Registry endpoint](/Configure/Endpoints/dockerregistry) to use to pull the **Builder image** - if the registry requires credentials to pull an image you can specify them as part of the endpoint and those will be used.
 * **Working directory** is the directory within a container image that will be used when running commands in a [CI task](/Pipelines/Tasks/ci) - more often than not, you can leave this blank to default to `/build`
 * **Cache** 
@@ -52,6 +63,9 @@ Referring back to previous tasks is done using a heirarchy that matches the stru
 Tasks return their output as JSON, and it's often useful to look at a previously executed task to find the correct path to an output variable - if you look at the [Execution]() of a Pipeline and examine the task details, you can click "View Output JSON" and use the "Path finder" option to discover the correct path:
 ![Find the correct output path](images/pipeline-find-path.gif)
 
+## Notifications
+
+The notifications tab allows you to configure notifications for pipeline events (completion, waiting for [user interaction](), failure, cancellation, and starting) using either an [Email endpoint](/Configure/Endpoints/email), [Jira endpoint](/Configure/Endpoints/jira), or by creating a Webhook with a POST, PUT or PATCH payload.
 
 ### More
 {{< toc-tree >}}
