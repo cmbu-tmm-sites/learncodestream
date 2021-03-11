@@ -67,6 +67,17 @@ Tasks return their output as JSON, and it's often useful to look at a previously
 
 The notifications tab allows you to configure notifications for pipeline events (completion, waiting for [user interaction](), failure, cancellation, and starting) using either an [Email endpoint](/Configure/Endpoints/email), [Jira endpoint](/Configure/Endpoints/jira), or by creating a Webhook with a POST, PUT or PATCH payload.
 
+{{< tabs "Notification Types" >}}
+{{< tab Email >}}
+{{< img src="2021-03-11-13-36-31.png" alt="Pipeline Email Notifications" >}}
+{{< /tab >}}
+{{< tab Ticket >}}
+{{< img src="2021-03-11-13-41-09.png" alt="Pipeline Jira Notifications" >}}
+{{< /tab >}}
+{{< tab Webhook >}}
+{{< img src="2021-03-11-13-41-47.png" alt="Pipeline Webhook Notifications" >}}
+{{< /tab >}}
+{{< /tabs >}}
 ### More
 {{< toc-tree >}}
 
