@@ -7,8 +7,7 @@ Variables are a great way to keep text, secrets etc. that you have to reuse, in 
 It's also a good practice, if you need to export your pipelines, to make sure, that sensetive information is not exported as well.
 
 ## Create
-![Create_Variable](images/)
-{{< img src="variables-create_variable.png" >}}
+![create__variable](/Configure/variables-create_var.png)
 ### Type
 - Regular - Value is not hidden
 - Secret - Value is hidden
