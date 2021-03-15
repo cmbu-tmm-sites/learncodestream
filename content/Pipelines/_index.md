@@ -22,8 +22,8 @@ The workspace tab configures the environment in which the pipeline runs
 The container image can be almost any image but it needs to have `wget` or `curl` in order to download and install the Code Stream CI Agent, which is installed when the container is spun up. 
 {{< /hint >}}
 * **Image Registry** selects the [Docker Registry endpoint](/Configure/Endpoints/dockerregistry) to use to pull the **Builder image** - if the registry requires credentials to pull an image you can specify them as part of the endpoint and those will be used.
-* **Working directory** is the directory within a container image that will be used when running commands in a [CI task](/Pipelines/Tasks/ci) - more often than not, you can leave this blank to default to `/build`
-* **Cache** 
+* **Working directory** is the directory within a container image that will be used when running commands (`workingDir`, by default) in a [CI task](/Pipelines/Tasks/ci) - more often than not, you can leave this blank to default to `/build`
+* **Cache** is accessible to each Pipeline run and can be used to cache files and folders that are common between Pipeline runs - for example if you download dependencies before building a Go project, those dependencies could be cached to speed up future executions of the same pipeline.
 * **Environment Variables** can be used to pass environment variables to a container (similar to the `-e VAR_NAME="value"` flag in the `docker run` command)
 * **CPU limit** if a CI task requires significant resources, the container's allocated CPU can be increased - it's not often required
 * **Memory limit** if a CI task requires significant resources, container's allocated Memory can be increased - it's not often required

@@ -1,13 +1,8 @@
 ---
 more:
-  - name: News
-    ref: "/#"
-    icon: "notification"
-  - name: Releases
-    ref: "https://github.com/thegeeklab/hugo-geekdoc/releases"
+  - name: Code Stream Docs
+    ref: "https://docs.vmware.com/en/vRealize-Automation/8.3/Getting-Started-CodeStream/GUID-D137AB85-F66C-4A90-A710-66605FD0355B.html"
     external: true
-    icon: "download"
-  - name: "View Source"
-    ref: "https://github.com/thegeeklab/hugo-geekdoc"
+  - name: Code Stream API Ref
+    ref: "https://code.vmware.com/apis/659/vra-cloud-code-stream-rest"
     external: true
-    icon: "github"
