@@ -3,6 +3,12 @@ more:
   - name: Code Stream Docs
     ref: "https://docs.vmware.com/en/vRealize-Automation/8.3/Getting-Started-CodeStream/GUID-D137AB85-F66C-4A90-A710-66605FD0355B.html"
     external: true
-  - name: Code Stream API Ref
+  - name: Code Stream API
     ref: "https://code.vmware.com/apis/659/vra-cloud-code-stream-rest"
+    external: true
+  - name: Free 45-day trial
+    ref: "https://cloud.vmware.com/vrealize-automation-cloud"
+    external: true
+  - name: Contribute
+    ref: "https://github.com/learncodestream/learncodestream"
     external: true
