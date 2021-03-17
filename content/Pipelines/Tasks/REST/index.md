@@ -4,7 +4,7 @@ title: "REST"
 
 The REST task is a powerful and adaptable task that lets us interact with any standard REST API - this means we can integrate almost any 3rd party system that has a REST API.
 
-Headers are common accross all the REST action types and allow you to set headers to be sent with the API request - typically these include a `Content-Type`, `Accept` and `Authorization` headers - however, you'll need to a consult your API documentation to see which headers are required.
+**Headers** are common accross all the REST action types and allow you to set the HTTP headers to be sent with the API request - often, but not always, these include `Content-Type`, `Accept` and `Authorization` headers - you'll need to a consult your API documentation to see which headers are required.
 
 {{< hint info >}}
 If your API requires specific configuration, you can often save time by creating repeatable API tasks as Pipelines, and nest them within your parent Pipeline using the [Pipeline Task](/Pipelines/Tasks/Pipeline)
