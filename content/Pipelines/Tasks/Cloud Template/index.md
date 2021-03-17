@@ -52,3 +52,12 @@ Roll an existing deployment back to a previous version of a VMware Cloud Templat
 
 {{< /tab >}}
 {{< /tabs >}}
+
+# Deployment Details
+The `deploymentDetails` output parameter is a JSON object with all of the properties of the deployment that has been created, updated, deleted or rolled back.
+
+## Output Parameters
+* `status`
+* `deploymentDetails`
+* `deploymentId`
+* `deploymentName`
