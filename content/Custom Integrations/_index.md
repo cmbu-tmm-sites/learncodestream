@@ -36,7 +36,7 @@ var myInput = context.getInput("inputPropertyName");
 {{< /tab >}}
 {{< /tabs >}}
 
-### Output Properties
+### Output Parameters
 Output properties are used to return values from the Custom Integration task - currently only one type (`label`) is supported. To return a value it should be out to the Output Property
 
 {{< tabs "Binding Outputs" >}}

@@ -15,3 +15,5 @@ Code Stream has native integrations with a range of [Endpoints](/Configure/Endpo
 If you want to find out more about vRealize Automation you can visit the official [product site](https://www.vmware.com/products/vrealize-automation.html), [view product features](https://cloud.vmware.com/vrealize-automation-cloud/features), or take a closer look at [Code Stream](https://cloud.vmware.com/code-stream). You can alse explore vRealize Automation Cloud with a [free 45-day trial](https://cloud.vmware.com/vrealize-automation-cloud/features#get-started).
 
 {{< img src="code-stream-overview.png" alt="Code Stream Overview" >}}
+
+{{< hint info >}}vRealize Automation Cloud has a monthly release cycle, meaning that newer features and enhancements will be available before they are rolled up into vRealize Automation 8.x on-premesis releases. Most screenshots in this guide are from vRealize Automation 8.3 - if a feature is only in vRealize Automation Cloud it will be noted.{{< /hint >}}
