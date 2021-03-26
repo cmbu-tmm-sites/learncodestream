@@ -8,7 +8,8 @@ The Gerrit endpoint provides configuration for use in the [Gerrit Trigger](/Trig
 * **Type** - Gerrit
 * **Name** - a name to identify the Gerrit Endpoint
 * **Description** - description of the Gerrit Endpoint
-* **Mark restricted** - as described in the [Projects](/Configure/Projects) page, if the Endpoint is marked as restricted only an Administrator can execute a Pipeline that uses it
+* **Mark restricted** - if enabled, only Code Stream or Project Administrators can execute Pipelines using this endpoint
+* **Cloud proxy** - (vRA Cloud only) the Cloud Proxy appliance through which the endpoint should communicate
 * URL - URL of the Gerrit server
 * Username - Username to authenticate to the Gerrit server
 * Password - Password to authenticate to the Gerrit server

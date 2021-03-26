@@ -2,13 +2,14 @@
 title: "Email"
 ---
 
-The Email endpoint provides configuration for sending [Pipeline Notifications](/Pipelines/#notifications) and [Task Notifications](/Pipelines/Tasks/#task-notifications), as well as [User Operation](/User-Operations) notifications.
+The Email endpoint provides configuration for sending [Pipeline Notifications](/Pipelines/#notifications), [Task Notifications](/Pipelines/Tasks/#task-notifications), and [User Operation](/User-Operations) notifications.
 
 * **Project** - endpoints are assigned to a Project to provide scope of access
 * **Type** - Email
 * **Name** - a name to identify the Email Endpoint
 * **Description** - description of the Email Endpoint
-* **Mark restricted** - as described in the [Projects](/Configure/Projects) page, if the Endpoint is marked as restricted only an Administrator can execute a Pipeline that uses it
+* **Mark restricted** - if enabled, only Code Stream or Project Administrators can execute Pipelines using this endpoint
+* **Cloud proxy** - (vRA Cloud only) the Cloud Proxy appliance through which the endpoint should communicate
 * **Sender's addresss** - the address to send the email from
 * **Encryption method** - TLS, SSL or NONE
 * **Outbound host** - FQDN or IP address of the SMTP host
@@ -19,4 +20,7 @@ The Email endpoint provides configuration for sending [Pipeline Notifications](/
 
 {{< img src="email-endpoint.png" alt="Adding an Email Endpoint configuration" >}}
 
-You can validate the configuration using the VALIDATE button. As with all sensitive information, you should create [Secret Variables](/Configure/Variables/) to store your user credentials.
+{{< hint warning >}}
+* You can validate the configuration using the VALIDATE button.
+* You should create [Secret Variables](/Configure/Variables/) to store your user credentials.
+{{< /hint >}}

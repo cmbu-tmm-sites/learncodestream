@@ -12,3 +12,9 @@ Just type in
 - Url
 - Username
 - Password
+
+{{< hint warning >}}
+* When adding an endpoint you'll be prompted to view and accept the certificate.
+* You can validate the configuration using the VALIDATE button.
+* You should create [Secret Variables](/Configure/Variables/) to store your user credentials.
+{{< /hint >}}

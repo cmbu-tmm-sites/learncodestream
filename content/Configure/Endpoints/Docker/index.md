@@ -8,13 +8,18 @@ The Docker Endpoint provides an execution environment for [CI Tasks](/Pipelines/
 * **Type** - Docker
 * **Name** - a name to identify the Docker Endpoint
 * **Description** - description of the Docker Endpoint
-* **Mark restricted** - as described in the [Projects](/Configure/Projects) page, if the Endpoint is marked as restricted only an Administrator can execute a Pipeline that uses it
+* **Mark restricted** - if enabled, only Code Stream or Project Administrators can execute Pipelines using this endpoint
+* **Cloud proxy** - (vRA Cloud only) the Cloud Proxy appliance through which the endpoint should communicate
 * **URL** - the address including protocol (HTTP/HTTPS) and port for the Docker API
 * **Shared Path** - a folder on the Docker host where the logs and artefacts generated in executions will be stored
 
 {{< img src="docker-endpoint.png" alt="Adding a Docker Endpoint configuration" >}}
 
-When adding a Docker host over TLS, you'll be prompted to view and trust the certificate. You can validate the configuration using the VALIDATE button. As with all sensitive information, you should create [Secret Variables](/Configure/Variables/) to store your user credentials.
+{{< hint warning >}}
+* When adding an endpoint you'll be prompted to view and accept the certificate.
+* You can validate the configuration using the VALIDATE button.
+* You should create [Secret Variables](/Configure/Variables/) to store your user credentials.
+{{< /hint >}}
 
 ## Links and References
 * [Creating a Docker host for vRealize Automation Code Stream](https://blogs.vmware.com/management/2020/08/creating-a-docker-host-for-vra-code-stream.html)
