@@ -99,5 +99,5 @@ The Rollback action relates to the management of `deployment`, `statefulset` and
 {{< /tabs >}}
 
 
-## References
+## Links and References
 * [Rolling Back a Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#rolling-back-a-deployment)

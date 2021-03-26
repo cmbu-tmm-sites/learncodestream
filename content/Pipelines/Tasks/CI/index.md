@@ -8,6 +8,8 @@ The CI task runs using parameters configured in the [Pipeline Workspace configur
 
 The CI task container will run for the lifespan of the entire pipeline, so subsequent CI tasks within a pipeline will be executed in the same environment - this means that you can, for example, write files in container that will be preserved between Tasks.
 
+If a Pipeline has been executed from a [Git Trigger](), and has been [configured to clone the repository with the correct Inputs](/Pipelines/#pipeline-configuration), the Git repository will be automatically cloned into the Working Directory.
+
 ## Creating a CI task
 As well as the [common configurations](/Pipelines/Tasks/#common-configuration) available to all tasks, the CI task has:
 * **Steps** - the script to execute in the container
@@ -36,5 +38,5 @@ Then the `BUILDTIME` variable can be added to the Export list and accessed later
 {{< img src="export-variable.png" alt="Export BUILDTIME variable from a CI task" >}}
 
 
-## References
+## Links and References
 * [What variables and expressions can I use when binding pipeline tasks in VMware Code Stream](https://docs.vmware.com/en/VMware-Code-Stream/services/Using-and-Managing-CodeStream/GUID-5094086E-AF44-456D-AB35-6853FB780F42.html)

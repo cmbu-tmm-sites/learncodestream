@@ -16,5 +16,5 @@ The Docker Endpoint provides an execution environment for [CI Tasks](/Pipelines/
 
 When adding a Docker host over TLS, you'll be prompted to view and trust the certificate. You can validate the configuration using the VALIDATE button. As with all sensitive information, you should create [Secret Variables](/Configure/Variables/) to store your user credentials.
 
-## References
+## Links and References
 * [Creating a Docker host for vRealize Automation Code Stream](https://blogs.vmware.com/management/2020/08/creating-a-docker-host-for-vra-code-stream.html)

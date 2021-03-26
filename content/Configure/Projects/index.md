@@ -15,5 +15,5 @@ A Project in vRealize Automation is used to scope user access to resources withi
 ## Restricted Endpoints/Variables
 [Endpoints](/Configure/Endpoints) and [Variables](/Configure/Variables) can be marked as restricted, which means that only users with Administrator rights (either Code Stream Administrator, or Project Administrator) can manage them. A [Pipeline](/Pipelines) or [Execution](/Executions) that uses a restricted Endpoint or Variable will not be accessible to any other user role.
 
-## References
+## Links and References
 * [How do I manage user access and approvals in Code Stream](https://docs.vmware.com/en/VMware-Code-Stream/services/Using-and-Managing-CodeStream/GUID-8EDC8310-232D-45FB-8C02-E4FB25687177.html#GUID-8EDC8310-232D-45FB-8C02-E4FB25687177)
