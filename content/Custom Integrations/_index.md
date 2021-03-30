@@ -2,7 +2,7 @@
 title: "Custom Integrations"
 weight: 600
 ---
-
+ 
 Custom Integrations allow you write custom code in Python, Shell or NodeJS, and execute your code as a Custom [Task]() in a [Stage]() of a [Pipeline](). When the Custom Integration task is executed, it uses the [Docker Host]() endpoint and Container Image configured for the parent [Pipeline]().
 
 ## Creating a Custom Integration
