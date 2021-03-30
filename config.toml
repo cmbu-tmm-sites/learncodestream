@@ -2,6 +2,7 @@ baseURL = "https://learncodestream.github.io"
 languageCode = "en-gb"
 title = "Learn Code Stream"
 theme = "hugo-geekdoc"
+googleAnalytics = "G-NN4VBNXV6M" 
 
 # Required to get well formatted code blocks
 pygmentsUseClasses = true
