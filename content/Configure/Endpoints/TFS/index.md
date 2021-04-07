@@ -20,7 +20,7 @@ The TFS endpoint provides integration to a TFS server and allows the use of a [T
 {{< img src="tfs-endpoint.png" alt="Adding a TFS Endpoint configuration" >}}
 
 {{< hint warning >}}
-* When adding an endpoint you'll be prompted to view and accept the certificate.
+* When adding an endpoint URL you'll be prompted to view and accept the certificate.
 * You can validate the configuration using the VALIDATE button.
 * You should create [Secret Variables](/Configure/Variables/) to store your user credentials.
 {{< /hint >}}

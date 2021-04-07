@@ -20,7 +20,11 @@ The Git endpoint provides configuration for use in [Pipelines](/Pipelines/#pipel
 
 {{< img src="git-endpoint.png" alt="Adding a Git Endpoint configuration" >}}
 
-When adding a Git endpoint you'll be prompted to view and accept the certificate. You can validate the configuration using the VALIDATE button. As with all sensitive information, you should create [Secret Variables](/Configure/Variables/) to store your user credentials.
+{{< hint warning >}}
+* When adding an endpoint URL you'll be prompted to view and accept the certificate.
+* You can validate the configuration using the VALIDATE button.
+* You should create [Secret Variables](/Configure/Variables/) to store your user credentials.
+{{< /hint >}}
 
 ## Links and References
 * [Configuring Git Endpoints and WebHooks for vRealize Automation Code Stream](https://blogs.vmware.com/management/2020/11/configuring-git-endpoints-and-webhooks-for-vrealize-automation-code-stream.html)

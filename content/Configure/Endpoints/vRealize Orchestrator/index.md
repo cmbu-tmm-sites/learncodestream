@@ -14,13 +14,13 @@ The vRealize Orchestrator endpoint provides integration to a vRealize Orchestrat
 * **Username** - Username to authenticate to the vRealize Orchestrator server
 * **Password** - Password to authenticate to the vRealize Orchestrator server
 
-{{< hint >}}To access the local vRealize Orchestrator instance on the vRealize Automation appliance, just enter the appliance URL{{< /hint >}}
+{{< hint info >}}To access the local vRealize Orchestrator instance on the vRealize Automation appliance, just enter the appliance URL{{< /hint >}}
 
 
 {{< img src="vro-endpoint.png" alt="Adding a vRealize Orchestrator Endpoint configuration" >}}
 
 {{< hint warning >}}
-* When adding an endpoint you'll be prompted to view and accept the certificate.
+* When adding an endpoint URL you'll be prompted to view and accept the certificate.
 * You can validate the configuration using the VALIDATE button.
 * You should create [Secret Variables](/Configure/Variables/) to store your user credentials.
 {{< /hint >}}

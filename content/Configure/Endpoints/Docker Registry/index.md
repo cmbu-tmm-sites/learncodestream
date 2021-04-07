@@ -20,7 +20,7 @@ The Docker Registry endpoint provides credentials for accessing a specific Regis
 {{< img src="docker-registry-endpoint.png" alt="Adding a Docker Registry Endpoint configuration" >}}
 
 {{< hint warning >}}
-* When adding an endpoint you'll be prompted to view and accept the certificate.
+* When adding an endpoint URL you'll be prompted to view and accept the certificate.
 * You can validate the configuration using the VALIDATE button.
 * You should create [Secret Variables](/Configure/Variables/) to store your user credentials.
 {{< /hint >}}
