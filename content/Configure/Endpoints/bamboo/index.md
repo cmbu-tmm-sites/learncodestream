@@ -20,3 +20,5 @@ The Bamboo endpoint provides configuration for use in the [Bamboo Task](/Pipelin
 * You can validate the configuration using the VALIDATE button.
 * You should create [Secret Variables](/Configure/Variables/) to store your user credentials.
 {{< /hint >}}
+
+
