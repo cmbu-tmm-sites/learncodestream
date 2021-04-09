@@ -1,7 +1,7 @@
 baseURL = "https://learncodestream.github.io"
 languageCode = "en-gb"
 title = "Learn Code Stream"
-theme = "hugo-geekdoc"
+theme = "hugo-theme-techdoc"
 googleAnalytics = "G-NN4VBNXV6M" 
 
 # Required to get well formatted code blocks

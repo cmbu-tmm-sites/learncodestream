@@ -29,4 +29,4 @@ The Task Rollback setting allows you to configure a Pipeline that will be execut
 
 ## Available Task Types
 More detailed information about each specific Task type is 
-{{< toc-tree >}}
+<!-- toc-tree -->

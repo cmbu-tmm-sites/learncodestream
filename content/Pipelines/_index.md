@@ -79,7 +79,7 @@ The notifications tab allows you to configure notifications for pipeline events 
 {{< /tab >}}
 {{< /tabs >}}
 ### More
-{{< toc-tree >}}
+<!-- toc-tree -->
 
 
 ### Reference
