@@ -10,7 +10,7 @@
         headerlink.setAttribute('title', 'Permalink to this headline');
 
         const icon = document.createElement('i');
-        icon.setAttribute('class', 'fas fa-hashtag');
+        icon.setAttribute('class', 'fas fa-link');
         icon.setAttribute('aria-hidden', 'true');
 
         headerlink.append(icon);
