@@ -65,15 +65,15 @@ enableGitInfo = true
 
 # Global menu section
 # See https://gohugo.io/content-management/menus/
-# [menu]
-#     [[menu.main]]
-#         name = "Home"
-#         url = "/"
-#         weight = 1
-#     [[menu.main]]
-#         name = "Getting Started"
-#         url = "/Getting-Started/"
-#         weight = 2
+[menu]
+    [[menu.main]]
+        name = "Home"
+        url = "/"
+        weight = 1
+    [[menu.main]]
+        name = "Getting Started"
+        url = "/Getting-Started/"
+        weight = 2
 
 # Markup configure section
 # See https://gohugo.io/getting-started/configuration-markup/
