@@ -83,5 +83,5 @@ The notifications tab allows you to configure notifications for pipeline events 
 
 
 ### Reference
-* <i class="fa fa-external-link-alt" aria-hidden="true"></i> [Creating and using pipelines in vRealize Automation Code Stream](https://docs.vmware.com/en/vRealize-Automation/8.3/Using-and-Managing-CodeStream/GUID-A2BB3A55-E42D-428C-8F7F-9EBE4AECD5FD.html)
+* [Creating and using pipelines in vRealize Automation Code Stream](https://docs.vmware.com/en/vRealize-Automation/8.3/Using-and-Managing-CodeStream/GUID-A2BB3A55-E42D-428C-8F7F-9EBE4AECD5FD.html)
 
