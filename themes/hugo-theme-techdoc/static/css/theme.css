@@ -1336,3 +1336,36 @@ main {
   text-align: right;
   color: #999;
 }
+
+.gdoc-tabs {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #e9ecef;
+  border-radius: .15rem;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap
+}
+.gdoc-tabs__label {
+  display: inline-block;
+  padding: .5rem 1rem;
+  border-bottom: 1px transparent;
+  cursor: pointer
+}
+.gdoc-tabs__content {
+  order: 999;
+  width: 100%;
+  border-top: 1px solid #f8f9fa;
+  padding: 1rem;
+  display: none
+}
+.gdoc-tabs__control:checked + .gdoc-tabs__label {
+  border-bottom: 1px solid #0a539a
+}
+.gdoc-tabs__control:checked + .gdoc-tabs__label + .gdoc-tabs__content {
+  display: block
+}
+
+.hidden {
+  display: none
+}
