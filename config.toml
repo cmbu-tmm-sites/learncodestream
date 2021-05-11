@@ -17,7 +17,7 @@ enableGitInfo = true
 
     # Documentation repository section
     # documentation repository (set edit link to documentation repository)
-    github_doc_repository = "https://github.com/learncodestream/learncodestream"
+    github_doc_repository = "https://github.com/cmbu-tmm-sites/learncodestream"
     github_doc_branch = "main"
 
     # Analytic section

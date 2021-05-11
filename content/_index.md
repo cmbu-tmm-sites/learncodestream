@@ -2,9 +2,11 @@
 
 ---
 
-Welcome to Learn Code Stream! This site is designed as a living technical reference focussed on providing in-depth information for the Code Stream developer - whether you're new to Code Stream or an experienced developer. 
+Welcome to Learn Code Stream! This site is designed as a living technical reference focussed on providing in-depth information for the Code Stream developer - whether you're new to Code Stream or an experienced developer.
 
 The [Getting Started](/Getting-Started) section will provide some basic tutorials to help you on your way to learning Code Stream. The rest of the navigation reflects the navigation in Code Stream itself to provide an easy reference.
+
+Learn Code Stream is written primarily by the Technical Marketing team for vRealize Automation, but we'd love for you to contribute! There's an "Edit on GitHub" link on each page that will take you to the source code for that content - feel free to clone the repository and write your own - we look forward to your Pull Requests!
 
 ## What is Code Stream?
 
