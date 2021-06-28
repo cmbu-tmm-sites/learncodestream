@@ -23,7 +23,11 @@ The steps stage is essentially a Shell script that will be executed on the CI co
 {{< img src="bash-steps.png" alt="An example CI Task steps">}}
 
 ### Preserve Artifacts
-Artifacts (files) specified here will be stored in a Shared Folder on the Docker host configured in the Pipeline workspace. The full path of the preserved file will be available in the Task output JSON for later use. If, for example, my CI task writes to a file "preserve.txt" and specifies the file name/path in the Perserve Artifacts setting, the full path to "preserve.txt" will be available in `${Stage0.Task0.output.artifacts[0]}`
+Artifacts (files) specified here will be stored in a Shared Folder on the Docker host configured in the Pipeline workspace. The below image shows a task where the SSH files are moved into the working directory (configured on the Workspace Tab of the pipeline). Then the file names provided for the "Preserve artifacts" configuration under the Steps code space. 
+
+![image](https://user-images.githubusercontent.com/22192242/123684497-70b22c00-d845-11eb-9b9e-19aeedaf1a1a.png)
+
+The full path of the preserved file will be available in the Task output JSON for later use. If, for example, my CI task writes to a file "preserve.txt" and specifies the file name/path in the Perserve Artifacts setting, the full path to "preserve.txt" will be available in `${Stage0.Task0.output.artifacts[0]}`
 
 {{< img src="preserve-artifacts.png" alt="Preserved Artifact Path in Output JSON" >}}
 ### Exports
