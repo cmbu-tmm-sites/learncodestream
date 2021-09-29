@@ -2,6 +2,8 @@
 
 Thank you for your interest in contributing to Learn Code Stream. In this guide you will learn how to contribute to the project.
 
+This site is generated using [Hugo](https://gohugo.io/) and is hosted on GitHub Pages. The content and structure for the site is within the `content` directory. Examples of formatting and shortcodes available in the template can be found in the existing pages.
+
 # Create a new issue
 The first way to request changes to the project is to create an issue. If you spot a problem with the docs, search if an issue already exists. If a related issue doesn't exist, you can open a new issue using the [GitHub issue tracker](https://github.com/cmbu-tmm-sites/learncodestream/issues).
 
@@ -27,15 +29,17 @@ Make changes to the docs and commit them to the repository. You can do this loca
 ![Create a file](CONTRIBUTING/2021-09-29-14-33-17.png)
 
 ## Commit changes
-Any changes you make to the docs must be committed to your fork of the repository. You can [commit the changes using the GitHub UI](https://docs.github.com/en/repositories/working-with-files/managing-files/committing-changes) or by using local commands or a Git client.
+Any changes you make to the docs must be committed to your fork of the repository. You can [commit the changes using the GitHub UI](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository) or by using local commands or a Git client.
 
 ![Commit new file](CONTRIBUTING/2021-09-29-14-34-07.png)
 
 ## Push changes to the repository
+
 If you're working in a local environment, you need to push the changes to the remote repository.
 
 ## Open a pull request
-Your branch should now be ahead of the master branch. You can [open a pull request using the GitHub UI](https://docs.github.com/en/repositories/using-pull-requests/opening-a-pull-request).
+
+Your branch should now be ahead of the master branch. You can [open a pull request using the GitHub UI](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork).
 
 ![Open a Pull Request](CONTRIBUTING/2021-09-29-14-37-43.png)
 
