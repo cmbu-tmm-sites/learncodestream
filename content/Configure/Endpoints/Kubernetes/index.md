@@ -2,7 +2,7 @@
 title: "Kubernetes"
 ---
 
-The Kubernetes endpoint provides configuration for a Kubernetes cluster to use with the [Kubernetes Task](/Pipelines/Tasks/Kubernetes/).
+The Kubernetes endpoint provides configuration for a Kubernetes cluster to use with the [Kubernetes Task](/Pipelines/Tasks/Kubernetes/) or as the [Pipeline execution context](/Pipelines/#pipeline-configuration).
 
 * **Project** - endpoints are assigned to a Project to provide scope of access
 * **Type** - Kubernetes
