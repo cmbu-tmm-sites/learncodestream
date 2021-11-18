@@ -31,10 +31,10 @@ The container image can be almost any image but it needs to have `wget` or `curl
 Note: You will need to configure the pipeline Inputs with the Git auto-inject parameters for this to work!
 {{< /hint >}}
 
-![Pipeline Workspace Configuration](images/pipeline-workspace-config.png)
+![Pipeline Workspace Configuration](/images/pipeline-workspace-config.png)
 {{< /tab >}}
 {{< tab "Input" >}} 
-![Pipeline Input Configuration](images/pipeline-input-config.png)
+![Pipeline Input Configuration](/images/pipeline-input-config.png)
 {{< /tab >}}
 {{< tab "Model" >}}
 The Model tab is where you configure the Stages and Tasks of the pipeline - it's where you spend most of your time when creating and editing pipelines.
@@ -42,12 +42,12 @@ The Model tab is where you configure the Stages and Tasks of the pipeline - it's
 - A [Stage](/Pipelines/Stages) is an encapsulation mechanism for tasks and are used for grouping the individual task execution statuses and results. 
 - A [Task](/Pipelines/Tasks) performs individual actions based on its type and configuration.  Tasks can deploy [VMware Cloud Templates](Tasks/cloudtemplate), and perform actions on configured endpoints, or more generic tasks such as prompting for user interations with [User Operation](/User-Operations), polling a 3rd party data source with the [Poll](/Pipelines/Tasks/poll/) task, or even perform a REST call.
 
-![Pipeline Model Configuration](images/pipeline-model-config.png)
+![Pipeline Model Configuration](/images/pipeline-model-config.png)
 {{< /tab >}}
 {{< tab "Output" >}} 
 Outputs can be mapped to values produced by tasks in a pipeline and can be useful when you're nesting pipelines using the [Pipeline task](/Pipelines/Tasks/pipeline) to return the results to the parent pipeline.
 
-![Pipeline Output Config](images/pipeline-output-config.png)
+![Pipeline Output Config](/images/pipeline-output-config.png)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -61,7 +61,7 @@ These can be accessed using by typing `$`, which will bring up the auto-completi
 Referring back to previous tasks is done using a heirarchy that matches the structure of the pipeline, for example: `${Build Stage.Build Task.output.exports.variableName}` would refer to the value of a variable called `variableName` that was exported from a task called `Build Task` in the stage `Build Stage`.
 
 Tasks return their output as JSON, and it's often useful to look at a previously executed task to find the correct path to an output variable - if you look at the [Execution]() of a Pipeline and examine the task details, you can click "View Output JSON" and use the "Path finder" option to discover the correct path:
-![Find the correct output path](images/pipeline-find-path.gif)
+![Find the correct output path](/images/pipeline-find-path.gif)
 
 ## Notifications
 
@@ -69,13 +69,13 @@ The notifications tab allows you to configure notifications for pipeline events 
 
 {{< tabs "Notification Types" >}}
 {{< tab Email >}}
-{{< img src="2021-03-11-13-36-31.png" alt="Pipeline Email Notifications" >}}
+{{< img src="images/email-notifications.png" alt="Pipeline Email Notifications" >}}
 {{< /tab >}}
 {{< tab Ticket >}}
-{{< img src="2021-03-11-13-41-09.png" alt="Pipeline Jira Notifications" >}}
+{{< img src="images/jira-notifications.png" alt="Pipeline Jira Notifications" >}}
 {{< /tab >}}
 {{< tab Webhook >}}
-{{< img src="2021-03-11-13-41-47.png" alt="Pipeline Webhook Notifications" >}}
+{{< img src="webhook-notifications.png" alt="Pipeline Webhook Notifications" >}}
 {{< /tab >}}
 {{< /tabs >}}
 ### More
