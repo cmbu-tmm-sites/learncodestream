@@ -16,25 +16,53 @@ When editing a Pipeline there are four tabs to configure:
 
 {{< tabs "pipelineConfig" >}}
 {{< tab "Workspace" >}} 
-The workspace tab configures the environment in which the pipeline runs
-* **Host** specifies a [Docker endpoint](/Configure/Endpoints/docker) on which [CI tasks](/Pipelines/Tasks/ci) and [Custom Integrations](/Custom-Integrations) will execute
-* **Builder image URL** configures the container image that will be used for CI tasks or Custom Integrations. You can specify using the just an official image (e.g. `python`), the image and a tag (e.g. `python:3.10.0a6-alpine`) or a full URL (e.g. `projects.registry.vmware.com/antrea/prom-prometheus:v2.19.3`){{< hint warning >}}
-The container image can be almost any image but it needs to have `wget` or `curl` in order to download and install the Code Stream CI Agent, which is installed when the container is spun up. 
-{{< /hint >}}
-* **Image Registry** selects the [Docker Registry endpoint](/Configure/Endpoints/dockerregistry) to use to pull the **Builder image** - if the registry requires credentials to pull an image you can specify them as part of the endpoint and those will be used.
-* **Working directory** is the directory within a container image that will be used when running commands (`workingDir`, by default) in a [CI task](/Pipelines/Tasks/ci) - more often than not, you can leave this blank to default to `/build`
-* **Cache** is accessible to each Pipeline run and can be used to cache files and folders that are common between Pipeline runs - for example if you download dependencies before building a Go project, those dependencies could be cached to speed up future executions of the same pipeline.
-* **Environment Variables** can be used to pass environment variables to a container (similar to the `-e VAR_NAME="value"` flag in the `docker run` command)
-* **CPU limit** if a CI task requires significant resources, the container's allocated CPU can be increased - it's not often required
-* **Memory limit** if a CI task requires significant resources, container's allocated Memory can be increased - it's not often required
-* **Git clone** - if the pipeline is triggered by a [Git webhook](/Triggers/Git), [CI tasks](/Pipelines/Tasks/ci) will automatically clone the Git repository. {{< hint warning >}}
-Note: You will need to configure the pipeline Inputs with the Git auto-inject parameters for this to work!
+
+
+The workspace tab configures the environment in which the pipeline runs. 
+
+**Type** Tasks can execute on a [Kubernetes endpoint](/Configure/Endpoints/kubernetes) or a [Docker endpoint](/Configure/Endpoints/docker). Some configurations is common to both types of workspace, other parts are specific.
+* **Kubernetes API Endpoint** specifies a [Kubernetes endpoint](/Configure/Endpoints/kubernetes) on which [CI tasks](/Pipelines/Tasks/ci) and [Custom Integrations](/Custom-Integrations) will execute
+* **Host Endpoint** specifies a [Docker endpoint](/Configure/Endpoints/docker) on which [CI tasks](/Pipelines/Tasks/ci) and [Custom Integrations](/Custom-Integrations) will execute
+
+**Builder image URL** is common accross both workspace types and configures the container image that will be used for CI tasks or Custom Integrations. You can specify using the just an official image (e.g. `python`), the image and a tag (e.g. `python:3.10.0a6-alpine`) or a full URL (e.g. `projects.registry.vmware.com/antrea/prom-prometheus:v2.19.3`)
+
+{{< hint warning >}}The container image can be almost any image but it needs to have `wget` or `curl` in order to download and install the Code Stream CI Agent, which is installed when the container is spun up.{{< /hint >}}
+
+**Image Registry** selects the [Docker Registry endpoint](/Configure/Endpoints/dockerregistry) to use to pull the **Builder image** - if the registry requires credentials to pull an image you can specify them as part of the endpoint and those will be used.
+
+{{< hint info >}}
+#### Kubernetes workspace only
+The following settings are available for the Kubernetes type workspace only
+
+**Namespace** specifies a Kubernetes Namespace in which the Kubernetes Deployment running the container image will be created. If the Namespace does not already exist, then Code Stream will automatically create it.
+
+**Proxy type** Code Stream communicates tasks with the CI Agent running on the container image Pod via a NodePort on the Kubernetes Worker, or a Load Balancer, however the NodePort requires each Kubernetes Node to be accessible to Code Stream. Most managed Kubernetes will not allow this, so you will need to specify Load Balancer instead.
+
+* **Node port** if you select the Node port proxy type you can leave this value blank to use an ephemeral port number, or specify a port between 30000-32767 (for example if you are using a managed Kubernetes cluster or are in an environment where you need to open a firewall port). Any Pipeline with its workspace configured using the same Namespace and Node Port will re-use the Node Port, or you can specify a different combination to use a different port.
+
+**Persistent Volume Claim** Code Stream will use this Persistent Volume Claim to store the logs and output of the CI Agent running on the container image Pod and persist them beyond the lifespan of a Pipeline run. If you do not specify a Persistent Volume Claim then an ephemeral volume type will be used.
+
+{{< img src="images/kubernetes-workspace-options.png" alt="Kubernetes Workspace Options" >}}
 {{< /hint >}}
 
-![Pipeline Workspace Configuration](/images/pipeline-workspace-config.png)
+**Working directory** is the directory within a container image that will be used when running commands (`workingDir`, by default) in a [CI task](/Pipelines/Tasks/ci) - more often than not, you can leave this blank to default to `/build`
+
+**Cache** is accessible to each Pipeline run and can be used to cache files and folders that are common between Pipeline runs - for example if you download dependencies before building a Go project, those dependencies could be cached to speed up future executions of the same pipeline.
+
+**Environment Variables** can be used to pass environment variables to a container (similar to the `-e VAR_NAME="value"` flag in the `docker run` command)
+
+**CPU limit** if a CI task requires significant resources, the container's allocated CPU can be increased - it's not often required
+
+**Memory limit** if a CI task requires significant resources, container's allocated Memory can be increased - it's not often required
+
+**Git clone** - if the pipeline is triggered by a [Git webhook](/Triggers/Git), [CI tasks](/Pipelines/Tasks/ci) will automatically clone the Git repository. {{< hint warning >}}
+You will need to configure  Pipeline Inputs with the Git auto-inject parameters for automatic cloning to work{{< /hint >}}
+
+{{< img src="/images/pipeline-workspace-config.png" alt="Pipeline Workspace Configuration" >}}
+
 {{< /tab >}}
 {{< tab "Input" >}} 
-![Pipeline Input Configuration](/images/pipeline-input-config.png)
+{{< img src="/images/pipeline-input-config.png" alt="Pipeline Input Configuration" >}}
 {{< /tab >}}
 {{< tab "Model" >}}
 The Model tab is where you configure the Stages and Tasks of the pipeline - it's where you spend most of your time when creating and editing pipelines.
@@ -42,12 +70,12 @@ The Model tab is where you configure the Stages and Tasks of the pipeline - it's
 - A [Stage](/Pipelines/Stages) is an encapsulation mechanism for tasks and are used for grouping the individual task execution statuses and results. 
 - A [Task](/Pipelines/Tasks) performs individual actions based on its type and configuration.  Tasks can deploy [VMware Cloud Templates](Tasks/cloudtemplate), and perform actions on configured endpoints, or more generic tasks such as prompting for user interations with [User Operation](/User-Operations), polling a 3rd party data source with the [Poll](/Pipelines/Tasks/poll/) task, or even perform a REST call.
 
-![Pipeline Model Configuration](/images/pipeline-model-config.png)
+{{< img src="/images/pipeline-model-config.png" alt="Pipeline Model Configuration" >}}
 {{< /tab >}}
 {{< tab "Output" >}} 
 Outputs can be mapped to values produced by tasks in a pipeline and can be useful when you're nesting pipelines using the [Pipeline task](/Pipelines/Tasks/pipeline) to return the results to the parent pipeline.
 
-![Pipeline Output Config](/images/pipeline-output-config.png)
+{{< img src="/images/pipeline-output-config.png" alt="Pipeline Output Configuration" >}}
 {{< /tab >}}
 {{< /tabs >}}
 
