@@ -103,7 +103,7 @@ The notifications tab allows you to configure notifications for pipeline events 
 {{< img src="images/jira-notification.png" alt="Pipeline Jira Notifications" >}}
 {{< /tab >}}
 {{< tab Webhook >}}
-{{< img src="webhook-notification.png" alt="Pipeline Webhook Notifications" >}}
+{{< img src="images/webhook-notification.png" alt="Pipeline Webhook Notifications" >}}
 {{< /tab >}}
 {{< /tabs >}}
 
