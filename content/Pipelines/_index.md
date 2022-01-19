@@ -97,17 +97,19 @@ The notifications tab allows you to configure notifications for pipeline events 
 
 {{< tabs "Notification Types" >}}
 {{< tab Email >}}
-{{< img src="images/email-notifications.png" alt="Pipeline Email Notifications" >}}
+{{< img src="images/email-notification.png" alt="Pipeline Email Notifications" >}}
 {{< /tab >}}
 {{< tab Ticket >}}
-{{< img src="images/jira-notifications.png" alt="Pipeline Jira Notifications" >}}
+{{< img src="images/jira-notification.png" alt="Pipeline Jira Notifications" >}}
 {{< /tab >}}
 {{< tab Webhook >}}
-{{< img src="webhook-notifications.png" alt="Pipeline Webhook Notifications" >}}
+{{< img src="webhook-notification.png" alt="Pipeline Webhook Notifications" >}}
 {{< /tab >}}
 {{< /tabs >}}
-### More
-<!-- toc-tree -->
+
+You can create a rich user experience with HTML templates, or custom formatting in your notifications:
+* [Creating HTML email templates for vRealize Automation Code Stream](https://blog.v12n.io/creating-html-email-templates-for-vrealize-code-stream/)
+* [Creating Slack Notifications](/Getting-Started/Slack-Notifications/)
 
 
 ### Reference
