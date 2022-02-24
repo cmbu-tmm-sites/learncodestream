@@ -1,7 +1,7 @@
 ---
 title: "SSH"
 ---
-The SSH task is similar in many ways to the [CI]() and [PowerShell]() tasks - it allows you to execute code on a remote machine, in this case over SSH. The task can authenticate with username and password, or a private key.
+The SSH task is similar in many ways to the [CI](/Pipelines/Tasks/CI/) and [PowerShell](/Pipelines/Tasks/PowerShell/) tasks - it allows you to execute code on a remote machine, in this case over SSH. The task can authenticate with username and password, or a private key.
 
 * **Host** - the IP or FQDN of the SSH host
 * **Username** - the username to authenticate to the SSH host 
@@ -13,6 +13,45 @@ The SSH task is similar in many ways to the [CI]() and [PowerShell]() tasks - it
 * **Working Directory** - the directory in which to execute the script (defaults to the users home directory, if not specified)
 
 {{< img src="ssh-task-config.png" alt="An example SSH task configuration" >}}
+
+To use an SSH key to connect to the SSH host, the key must be a PEM encoded RSA key (it should start with `---BEGIN RSA PRIVATE KEY----`). It's recommended to generate a key specifically for CodeStream and store the key in a [Variable](/Configure/variables/). You can enter a passphrase for additional security.
+
+The following example generates a key pair called `id_codestream`. It is executed on the SSH host under the user profile that will be used to connect (`autotmm`)
+
+```shell
+# Generate the rsa key-pair
+autotmm@smcg-sc2-docker-host:~$ ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/autotmm/.ssh/id_rsa): /home/autotmm/.ssh/id_codestream
+Enter passphrase (empty for no passphrase): ***********
+Enter same passphrase again: ***********
+Your identification has been saved in /home/autotmm/.ssh/id_codestream.
+Your public key has been saved in /home/autotmm/.ssh/id_codestream.pub.
+The key fingerprint is:
+SHA256:WJv9OkQ+byQmI5XePG+/FjlHxVt3B6JS0ptzXKJ0/uw autotmm@smcg-sc2-docker-host
+The key's randomart image is:
++---[RSA 2048]----+
+|        ... . .o |
+|         oo.o.. B|
+|        oo.B o  B|
+|       oo=* +  ..|
+|      .oS=.o o o |
+|      . + X.. * .|
+|       . = B.. + |
+|          ..= E  |
+|          .+ oo. |
++----[SHA256]-----+
+
+# Add the new SSH key to the SSH agent
+autotmm@smcg-sc2-docker-host:~$ ssh-add ~/.ssh/id_codestream
+Identity added: /home/autotmm/.ssh/id_codestream (/home/autotmm/.ssh/id_codestream)
+
+# Add the SSH public key to the authorized_keys file
+autotmm@smcg-sc2-docker-host:~$ cat ~/.ssh/id_codestream.pub >> ~/.ssh/authorized_keys
+```
+The contents of `id_codestream` can then be used in the SSH task (along with the passphrase, if used) to connect to the SSH server.
+
+{{< img src="ssh-task-key.png" alt="Using an SSH key to connect" >}}
 
 {{< hint warning >}}
 Secret [Variables](/Configure/Variables) should be used for authentication parameters to ensure they're kept secret and hidden from logs
