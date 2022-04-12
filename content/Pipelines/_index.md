@@ -28,7 +28,7 @@ The workspace tab configures the environment in which the pipeline runs.
 
 {{< hint warning >}}The container image can be almost any image but it needs to have `wget` or `curl` in order to download and install the Code Stream CI Agent, which is installed when the container is spun up.{{< /hint >}}
 
-**Image Registry** selects the [Docker Registry endpoint](/Configure/Endpoints/dockerregistry) to use to pull the **Builder image** - if the registry requires credentials to pull an image you can specify them as part of the endpoint and those will be used.
+**Image Registry** selects the [Docker Registry endpoint](/Configure/Endpoints/Docker-Registry) to use to pull the **Builder image** - if the registry requires credentials to pull an image you can specify them as part of the endpoint and those will be used.
 
 {{< hint info >}}
 #### Kubernetes workspace only
