@@ -2,7 +2,7 @@
 title: "Kubernetes"
 ---
 
-The Kubernetes endpoint provides configuration for a Kubernetes cluster to use with the [Kubernetes Task](/Pipelines/Tasks/Kubernetes/) or as the [Pipeline execution context](/Pipelines/#pipeline-configuration).
+The Kubernetes endpoint provides configuration for a Kubernetes cluster to use with the [Kubernetes Task](/pipelines/tasks/kubernetes) or as the [Pipeline execution context](/pipelines/#pipeline-configuration).
 
 * **Project** - endpoints are assigned to a Project to provide scope of access
 * **Type** - Kubernetes
@@ -27,5 +27,5 @@ The Kubernetes endpoint provides configuration for a Kubernetes cluster to use w
 {{< hint warning >}}
 * When adding an endpoint URL you'll be prompted to view and accept the certificate.
 * You can validate the configuration using the VALIDATE button.
-* You should create [Secret Variables](/Configure/Variables/) to store your user credentials.
+* You should create [Secret Variables](/configure/variables) to store your user credentials.
 {{< /hint >}}

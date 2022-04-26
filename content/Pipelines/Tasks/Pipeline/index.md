@@ -4,7 +4,7 @@ title: "Pipeline"
 
 The Pipeline task allows you to nest existing Pipelines within a parent pipeline, which is really useful for chaining together smaller units of work within a larger parent process. The Pipeline task will automatically generate fields for the Inputs of the nested Pipeline, and the Output parameters will be available to the parent Pipeline as the output properties of the Pipeline task.
 
-The Task configured below will execute a Pipeline called "vra-POST", the three Input parameters (`vraAccessToken`, `vraRequestPayload`, `vraRequestUri`) for the Pipeline have been automatically added to the task and the one output paramter `vraResponseJSON` has been added to the output parameters.
+The Task configured below will execute a Pipeline called "vra-POST", the three Input parameters (`vraaccesstoken`, `vrarequestpayload`, `vrarequesturi`) for the Pipeline have been automatically added to the task and the one output paramter `vraResponseJSON` has been added to the output parameters.
 
 {{< img src="nested-pipeline.png" alt="Nested Pipeline Configuration" >}}
 

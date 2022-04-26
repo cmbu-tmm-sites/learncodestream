@@ -2,7 +2,7 @@
 title: "Gerrit"
 ---
 
-The Gerrit endpoint provides configuration for use in the [Gerrit Trigger](/Triggers/Gerrit/).
+The Gerrit endpoint provides configuration for use in the [Gerrit Trigger](/triggers/gerrit).
 
 * **Project** - endpoints are assigned to a Project to provide scope of access
 * **Type** - Gerrit
@@ -13,7 +13,7 @@ The Gerrit endpoint provides configuration for use in the [Gerrit Trigger](/Trig
 * **URL** - URL of the Gerrit server
 * **Username** - Username to authenticate to the Gerrit server
 * **Password** - Password to authenticate to the Gerrit server
-* **Private key** - Private key (RSA) to authenticate to the Gerrit server
+* **Private key** - Private key (rsa) to authenticate to the Gerrit server
 * **Pass phrase** - Pass phrase to decrypt the Private key
 
 {{< img src="gerrit-endpoint.png" alt="Adding a Gerrit Endpoint configuration" >}}
@@ -21,5 +21,5 @@ The Gerrit endpoint provides configuration for use in the [Gerrit Trigger](/Trig
 {{< hint warning >}}
 * When adding an endpoint URL you'll be prompted to view and accept the certificate.
 * You can validate the configuration using the VALIDATE button.
-* You should create [Secret Variables](/Configure/Variables/) to store your user credentials.
+* You should create [Secret Variables](/configure/variables) to store your user credentials.
 {{< /hint >}}

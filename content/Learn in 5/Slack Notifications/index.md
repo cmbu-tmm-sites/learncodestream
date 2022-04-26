@@ -1,5 +1,9 @@
 ---
 Title: "Slack Notifications"
+Date: 29/03/2021
+Aliases:
+  - "/getting-started/slack-notifications/"
+
 ---
 
 Using the webhook function for Pipeline Notifications or Task Notifications and the [Slack Incoming Webhooks app](https://vmware.slack.com/apps/A0F7XDUAZ-incoming-webhooks) it's possible to get a rich set of notifications on pipeline events.

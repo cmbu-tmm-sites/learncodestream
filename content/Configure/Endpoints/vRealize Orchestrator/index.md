@@ -2,7 +2,7 @@
 title: "vRealize Orchestrator"
 ---
 
-The vRealize Orchestrator endpoint provides integration to a vRealize Orchestrator server and allows the use of a [vRealize Orchestrator Task](/Pipelines/Tasks/vRealize-Orchestrator/).
+The vRealize Orchestrator endpoint provides integration to a vRealize Orchestrator server and allows the use of a [vRealize Orchestrator Task](/pipelines/tasks/vrealize-orchestrator).
 
 * **Project** - endpoints are assigned to a Project to provide scope of access
 * **Type** - vRealize Orchestrator
@@ -22,7 +22,7 @@ The vRealize Orchestrator endpoint provides integration to a vRealize Orchestrat
 {{< hint warning >}}
 * When adding an endpoint URL you'll be prompted to view and accept the certificate.
 * You can validate the configuration using the VALIDATE button.
-* You should create [Secret Variables](/Configure/Variables/) to store your user credentials.
+* You should create [Secret Variables](/configure/variables) to store your user credentials.
 {{< /hint >}}
 
 ## Links and References

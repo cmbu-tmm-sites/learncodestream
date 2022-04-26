@@ -7,7 +7,7 @@ The REST task is a powerful and adaptable task that lets us interact with any st
 **Headers** are common accross all the REST action types and allow you to set the HTTP headers to be sent with the API request - often, but not always, these include `Content-Type`, `Accept` and `Authorization` headers - you'll need to a consult your API documentation to see which headers are required.
 
 {{< hint info >}}
-If your API requires specific configuration, you can often save time by creating repeatable API tasks as Pipelines, and nest them within your parent Pipeline using the [Pipeline Task](/Pipelines/Tasks/Pipeline)
+If your API requires specific configuration, you can often save time by creating repeatable API tasks as Pipelines, and nest them within your parent Pipeline using the [Pipeline Task](/pipelines/tasks/pipeline)
 {{< /hint >}}
 
 ## REST Action types
@@ -43,7 +43,7 @@ The DELETE action will delete an object, typically based on an identifier in the
 {{< /tabs >}}
 
 {{< hint warning >}}
-The REST API task will execute more quickly than a [CI task](/Pipelines/Tasks/CI) or [Custom Integration task](/Pipelines/Tasks/Custom) because it's executed directly within the vRealize Automation appliance (or the vRealize Automation Cloud Proxy Agent) rather than on a [Docker Endpoint](/Configure/Endpoints/Docker). So, although you can often achieve the same outcome with any of these, the REST task might be preferrable.
+The REST API task will execute more quickly than a [CI task](/pipelines/tasks/ci) or [Custom Integration task](/pipelines/tasks/custom) because it's executed directly within the vRealize Automation appliance (or the vRealize Automation Cloud Proxy Agent) rather than on a [Docker Endpoint](/configure/endpoints/docker). So, although you can often achieve the same outcome with any of these, the REST task might be preferrable.
 {{< /hint >}}
 
 

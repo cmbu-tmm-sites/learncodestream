@@ -5,7 +5,7 @@ weight: 720
 
 ## Activity
 
-The activity tab shows a log of the Git events that have been recieved by Code Stream. You can see details of the Git commit details, repository and messages, as well the [Pipeline](/Pipeline) that has been executed in response and it's status. You can also click directly through to the [Execution](/Executions) of the Pipeline.
+The activity tab shows a log of the Git events that have been recieved by Code Stream. You can see details of the Git commit details, repository and messages, as well the [Pipeline](/pipeline) that has been executed in response and it's status. you can also click directly through to the [execution](/executions) of the Pipeline.
 
 {{< img src="git-trigger-activity.png" alt="Git Trigger Activity" >}}
 
@@ -26,7 +26,7 @@ When creating a new Webhook for Git, the following options are available:
 * **Trigger** - configuration of the webhook on the Git endpoint
     * **For Git** - Trigger the webhook when a Push is made to the repository branch, or when a Pull Request is made against the branch
     * **API token** - a vRealize Automation API token that has permissions to execute the Pipeline configured in the trigger
-    * **SSL verification** - if enabled, will enable SSL verification for the webhook (the repository must trust the vRealize Automation SSL certificate)
+    * **SSL verification** - if enabled, will enable SSL verification for the webhook (the repository must trust the vrealize automation ssl certificate)
     * **Pipeline** - the Code Stream Pipeline to execute
     * **Execution trigger delay** - time to wait from recieving the event until executing the pipeline
 

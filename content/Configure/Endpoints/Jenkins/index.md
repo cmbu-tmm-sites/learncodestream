@@ -2,7 +2,7 @@
 title: "Jenkins"
 ---
 
-The Jenkins endpoint provides integration to a Jenkins server and allows the use of a [Jenkins Task](/Pipelines/Tasks/Jenkins/) to execute a Job on the Jenkins server configured in the endpoint.
+The Jenkins endpoint provides integration to a Jenkins server and allows the use of a [Jenkins Task](/pipelines/tasks/jenkins) to execute a Job on the Jenkins server configured in the endpoint.
 
 * **Project** - endpoints are assigned to a Project to provide scope of access
 * **Type** - Jenkins
@@ -23,8 +23,8 @@ The Jenkins endpoint provides integration to a Jenkins server and allows the use
 {{< hint warning >}}
 * When adding an endpoint URL you'll be prompted to view and accept the certificate.
 * You can validate the configuration using the VALIDATE button.
-* You should create [Secret Variables](/Configure/Variables/) to store your user credentials.
+* You should create [Secret Variables](/configure/variables) to store your user credentials.
 {{< /hint >}}
 
 ## Links and References
-* [https://www.jenkins.io/](https://www.jenkins.io/)
+* [https://www.jenkins.io/](https://www.jenkins.io)

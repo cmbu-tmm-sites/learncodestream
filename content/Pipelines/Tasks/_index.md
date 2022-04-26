@@ -18,7 +18,7 @@ If **Continue on failure** is checked, the failure of this Task will not cause t
 {{< img src="/images/pipeline-task-common-config.png" alt="Common Task Configuration" >}}
 
 ### Task Notifications
-Task notifications are almost identical to [Pipeline notifications](/Pipelines/#notifications) except that they offer a specific events for the task (completes, is waiting, fails, starting).
+Task notifications are almost identical to [Pipeline notifications](/pipelines/#notifications) except that they offer a specific events for the task (completes, is waiting, fails, starting).
 
 {{< img src="/images/pipeline-task-notifications.png" alt="Task Notifications" >}}
 

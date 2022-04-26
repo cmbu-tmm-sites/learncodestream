@@ -5,7 +5,7 @@ theme = "hugo-theme-techdoc"
 # Required to get well formatted code blocks
 pygmentsUseClasses = true
 pygmentsCodeFences = true
-disablePathToLower = true
+disablePathToLower = false
 enableGitInfo = true
 
 [params]

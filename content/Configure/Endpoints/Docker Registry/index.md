@@ -2,7 +2,7 @@
 title: "Docker Registry"
 ---
 
-The Docker Registry endpoint provides credentials for accessing a specific Registry in the context of a [Pipeline Workspace](/Pipelines/#pipeline-configuration). If a container image requires authentication to download, credentials can be added and the Endpoint assigned to the [Pipeline Workspace](/Pipelines/#pipeline-configuration) configuration. When the Pipeline is executed the Endpoint credentials will be used in the `docker pull`.
+The Docker Registry endpoint provides credentials for accessing a specific Registry in the context of a [Pipeline Workspace](/pipelines/#pipeline-configuration). If a container image requires authentication to download, credentials can be added and the Endpoint assigned to the [Pipeline Workspace](/pipelines/#pipeline-configuration) configuration. When the Pipeline is executed the Endpoint credentials will be used in the `docker pull`.
 
 
 * **Project** - endpoints are assigned to a Project to provide scope of access
@@ -22,7 +22,7 @@ The Docker Registry endpoint provides credentials for accessing a specific Regis
 {{< hint warning >}}
 * When adding an endpoint URL you'll be prompted to view and accept the certificate.
 * You can validate the configuration using the VALIDATE button.
-* You should create [Secret Variables](/Configure/Variables/) to store your user credentials.
+* You should create [Secret Variables](/configure/variables) to store your user credentials.
 {{< /hint >}}
 
 {{< hint info >}}The Docker Registry endpoint can be used to avoid the Docker Hub rate limit by authenticating before downloading the container image. Authenticated user accounts have a higher rate limit on Docker Hub{{< /hint >}}

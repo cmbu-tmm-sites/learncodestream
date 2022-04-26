@@ -7,9 +7,9 @@ The Executions page provides a detailed account of every Pipeline Execution that
 
 {{< img src="execution-view.png" alt="Pipeline Execution Overview" >}}
 
-Clicking into an Execution will give you a detailed view of the Pipeline [Stages](/Pipelines/Stages), [Tasks](/Pipelines/Tasks), [Configuration](/Pipelines/#pipeline-configuration), Inputs, Task Inputs, Task Outputs, Task execution logs, and the output JSON object from the execution.
+Clicking into an Execution will give you a detailed view of the Pipeline [Stages](/pipelines/stages), [Tasks](/pipelines/tasks), [Configuration](/pipelines/#pipeline-configuration), Inputs, Task Inputs, Task Outputs, Task execution logs, and the output JSON object from the execution.
 {{< hint info >}}
-The Output JSON view is very useful for identifying variables from one task to pass to another - see [Variables in Pipelines](/Pipelines/#variables-in-pipelines)
+The Output JSON view is very useful for identifying variables from one task to pass to another - see [Variables in Pipelines](/pipelines/#variables-in-pipelines)
 {{< /hint >}}
 {{< img src="execution-details.png" alt="Pipeline Execution Detail" >}}
 

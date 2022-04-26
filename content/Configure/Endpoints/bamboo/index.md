@@ -1,7 +1,7 @@
 ---
 title: "Bamboo"
 ---
-The Bamboo endpoint provides configuration for use in the [Bamboo Task](/Pipelines/Tasks/Bamboo/).
+The Bamboo endpoint provides configuration for use in the [Bamboo Task](/pipelines/tasks/bamboo).
 
 * **Project** - endpoints are assigned to a Project to provide scope of access
 * **Type** - Bamboo
@@ -18,5 +18,5 @@ The Bamboo endpoint provides configuration for use in the [Bamboo Task](/Pipelin
 {{< hint warning >}}
 * When adding an endpoint URL you'll be prompted to view and accept the certificate.
 * You can validate the configuration using the VALIDATE button.
-* You should create [Secret Variables](/Configure/Variables/) to store your user credentials.
+* You should create [Secret Variables](/configure/variables) to store your user credentials.
 {{< /hint >}}

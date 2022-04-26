@@ -2,7 +2,7 @@
 title: "Git"
 ---
 
-The Git endpoint provides configuration for use in [Pipelines](/Pipelines/#pipeline-configuration), [CI Tasks](/Pipelines/Tasks/CI/), [Kubernetes Tasks](/Pipelines/Tasks/Kubernetes/), [VMware Cloud Template Tasks](/Pipelines/Tasks/Cloud-Template/), and [Git Triggers](/Triggers/Git/). A Git Endpoint provides access to a specific branch of a specific repository.
+The Git endpoint provides configuration for use in [Pipelines](/pipelines/#pipeline-configuration), [CI Tasks](/pipelines/tasks/ci), [Kubernetes Tasks](/pipelines/tasks/kubernetes), [VMware Cloud Template Tasks](/pipelines/tasks/cloud-template), and [Git Triggers](/triggers/git). A Git Endpoint provides access to a specific branch of a specific repository.
 
 * **Project** - endpoints are assigned to a Project to provide scope of access
 * **Type** - Git
@@ -23,7 +23,7 @@ The Git endpoint provides configuration for use in [Pipelines](/Pipelines/#pipel
 {{< hint warning >}}
 * When adding an endpoint URL you'll be prompted to view and accept the certificate.
 * You can validate the configuration using the VALIDATE button.
-* You should create [Secret Variables](/Configure/Variables/) to store your user credentials.
+* You should create [Secret Variables](/configure/variables) to store your user credentials.
 {{< /hint >}}
 
 ## Links and References

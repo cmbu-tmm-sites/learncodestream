@@ -2,7 +2,7 @@
 title: "Docker"
 ---
 
-The Docker Endpoint provides an execution environment for [CI Tasks](/Pipelines/Tasks/CI) and [Custom Integrations](/Custom-Integrations) which are executed inside a container image on the configured Docker host. 
+The Docker Endpoint provides an execution environment for [CI Tasks](/pipelines/tasks/ci) and [Custom Integrations](/custom-integrations) which are executed inside a container image on the configured Docker host. 
 
 * **Project** - endpoints are assigned to a Project to provide scope of access
 * **Type** - Docker
@@ -10,7 +10,7 @@ The Docker Endpoint provides an execution environment for [CI Tasks](/Pipelines/
 * **Description** - description of the Docker Endpoint
 * **Mark restricted** - if enabled, only Code Stream or Project Administrators can execute Pipelines using this endpoint
 * **Cloud proxy** - (vRA Cloud only) the Cloud Proxy appliance through which the endpoint should communicate
-* **URL** - the address including protocol (HTTP/HTTPS) and port for the Docker API
+* **URL** - the address including protocol (http/https) and port for the Docker API
 * **Shared Path** - a folder on the Docker host where the logs and artefacts generated in executions will be stored
 
 {{< img src="docker-endpoint.png" alt="Adding a Docker Endpoint configuration" >}}
@@ -18,7 +18,7 @@ The Docker Endpoint provides an execution environment for [CI Tasks](/Pipelines/
 {{< hint warning >}}
 * When adding an endpoint URL you'll be prompted to view and accept the certificate.
 * You can validate the configuration using the VALIDATE button.
-* You should create [Secret Variables](/Configure/Variables/) to store your user credentials.
+* You should create [Secret Variables](/configure/variables) to store your user credentials.
 {{< /hint >}}
 
 ## Links and References

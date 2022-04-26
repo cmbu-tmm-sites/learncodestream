@@ -16,7 +16,7 @@ Create a new deployment from a VMware Cloud Template
 * **Cloud template source**
     * select a **Cloud template** and **Version** directly from vRealize Automation Cloud Assembly, -or-
     * select a **Git** endpoint and **File path** to the blueprint YAML
-* **Parameters** - blueprint inputs and default values will be loaded into the table. You can keep the defaults, use [Pipeline Variables](/Pipelines/#variables-in-pipelines), or manually populate the answers
+* **Parameters** - blueprint inputs and default values will be loaded into the table. You can keep the defaults, use [Pipeline Variables](/pipelines/#variables-in-pipelines), or manually populate the answers
 {{< img src="cloud-template-create.png" alt="Create a new deloyment">}}
 {{< /tab >}}
 
@@ -29,7 +29,7 @@ Update an existing deployment with an updated VMware Cloud Template
 * **Cloud template source**
     * select a **Cloud template** and **Version** directly from vRealize Automation Cloud Assembly, -or-
     * select a **Git** endpoint and **File path** to the blueprint YAML
-* **Parameters** - blueprint inputs and default values will be loaded into the table. You can keep the defaults, use [Pipeline Variables](/Pipelines/#variables-in-pipelines), or manually populate the answers
+* **Parameters** - blueprint inputs and default values will be loaded into the table. You can keep the defaults, use [Pipeline Variables](/pipelines/#variables-in-pipelines), or manually populate the answers
 
 {{< img src="cloud-template-update.png" alt="Update an existing deployment" >}}
 {{< /tab >}}

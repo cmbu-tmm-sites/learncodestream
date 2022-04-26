@@ -1,8 +1,11 @@
 ---
 title: "Publishing Preserved Artifacts"
+date: "14/04/2021"
+aliases:
+  - "/getting-started/publishing-preserved-artifacts/"
 ---
 
-With the [CI task](/Pipelines/Tasks/CI/) in a Code Stream Pipeline, it's possible to [Preserve Artifacts](/Pipelines/Tasks/CI/#preserve-artifacts) - any file that you want to persist beyond the lifetime of a [Pipeline Execution](/Executions/) can be added to the Preserve Artifacts field. These preserved artifacts are stored on the Shared Path on the [Docker Host](/Configure/Endpoints/Docker/), which you can access later using the file path specified in the CI task outputs. One of the issues with this is that the Shared Path is also where the pipeline execution logs are kept, which may contain sensitive information if you're not using [Secret Variables](/Configure/variables/), and to deliver a preserved file to an end user you may need to grant SSH access to your host - not ideal.
+With the [CI task](/pipelines/tasks/ci) in a Code Stream Pipeline, it's possible to [Preserve Artifacts](/pipelines/tasks/ci/#preserve-artifacts) - any file that you want to persist beyond the lifetime of a [Pipeline Execution](/executions) can be added to the Preserve Artifacts field. These preserved artifacts are stored on the Shared Path on the [Docker Host](/configure/endpoints/docker), which you can access later using the file path specified in the CI task outputs. One of the issues with this is that the Shared Path is also where the pipeline execution logs are kept, which may contain sensitive information if you're not using [Secret Variables](/configure/variables), and to deliver a preserved file to an end user you may need to grant SSH access to your host - not ideal.
 
 In order allow my end users to download a preserved artifact without granting them SSH access to my Docker host, I will publish the Shared Path using NGINX.
 

@@ -14,7 +14,7 @@ The Custom Integration is essentially a YAML file with four sections:
 - **Output Properties** - an array of output properties that are returned by the execution of the Code
 
 ### Input Properties
-The available input types are documented in article linked the [reference](/Custom-Integrations/#refs) section below, one of the easiest ways to understand the different types is to create a new Custom Integration, select the runtime of your choice, then view the generated placeholder content. 
+The available input types are documented in article linked the [reference](/custom-integrations/#refs) section below, one of the easiest ways to understand the different types is to create a new Custom Integration, select the runtime of your choice, then view the generated placeholder content. 
 
 {{< tabs "Binding Inputs" >}}
 {{< tab Shell >}}
@@ -25,13 +25,13 @@ echo $inputPropertyName
 {{< tab Python >}}
 ```python
 from context import getInput # Import the getInput function from context.py
-myInput = getInput("inputPropertyName")
+myInput = getInput("inputpropertyname")
 ```
 {{< /tab >}}
 {{< tab NodeJS >}}
 ```javascript
 var context = require("./context.js") // Import the getInput function from context.js
-var myInput = context.getInput("inputPropertyName");
+var myInput = context.getInput("inputpropertyname");
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -68,7 +68,7 @@ When you create a new Custom Integration it will be created as a Draft. In order
 
 The below example code takes a `username` and `password` input and returns a `basicAuthHeader` output for each of the runtimes - it's a very simple use case that helps me when working with a REST API that only accepts a basic authentication headers.
 
-{{< hint warning >}}The Container image you specify in the [Pipeline Workspace configuration](/Pipelines/#pipeline-configuration) must support the runtime you're using for the Custom Integration code{{< /hint >}}
+{{< hint warning >}}The Container image you specify in the [Pipeline Workspace configuration](/pipelines/#pipeline-configuration) must support the runtime you're using for the Custom Integration code{{< /hint >}}
 
 {{< tabs "Create a Basic Authentication Header" >}}
 {{< tab Shell >}}
@@ -182,7 +182,7 @@ outputProperties:
 {{< /tab >}}
 {{< /tabs >}}
 
-To use my new task in a Pipeline stage, I create a new Task, select Type `Custom` and select my Custom Integration and released version. This automatically creates an input form for the `username` and `password` input properties. Because I have set `bindable: true` for these properties, I can bind them to [Pipeline variables](/Pipelines/#variables-in-pipelines), or [Variables](/Configure/variables)
+To use my new task in a Pipeline stage, I create a new Task, select Type `Custom` and select my Custom Integration and released version. This automatically creates an input form for the `username` and `password` input properties. Because I have set `bindable: true` for these properties, I can bind them to [Pipeline variables](/pipelines/#variables-in-pipelines), or [Variables](/configure/variables)
 
 {{< img src="custom-integration-in-pipeline.png" alt="Using a Custom Integration in a Custom task" >}}
 

@@ -2,7 +2,7 @@
 title: "Kubernetes"
 ---
 
-The Kubernetes Task allows for interation and execution of Get, Create, Apply, Delete and Rollback actions against a [Kubernetes Endpoint](/Configure/Endpoints/Kubernetes). You can use a [Git Endpoint](/Configure/Endpoints/Git) for the YAML manifest definitions. The combination of [Git Endpoints](/Configure/Endpoints/Git), use of a [Git Triggers](/Triggers/Git) and the Kubernetes task allows you to build complex Kubernetes application deployment strategies.
+The Kubernetes Task allows for interation and execution of Get, Create, Apply, Delete and Rollback actions against a [Kubernetes Endpoint](/configure/endpoints/kubernetes). you can use a [git endpoint](/configure/endpoints/git) for the yaml manifest definitions. the combination of [git endpoints](/configure/endpoints/git), use of a [git triggers](/triggers/git) and the Kubernetes task allows you to build complex Kubernetes application deployment strategies.
 
 Common across all the Kubernetes actions is are:
 * **Kubernetes Cluster** - the Kubernetes endpoint that the task will execute against
@@ -58,7 +58,7 @@ When this Create task is executed, the response JSON will include responses for 
 {{< /tab >}}
 
 {{< tab Apply >}}
-The Apply action allows us to modify existing objects by applying an updated manifest YAML - this can be useful in a GitOps scenario when we are using Git as the single source of truth for an application. In this case when a YAML file is updated, a [Git Trigger](/Triggers/Git) will start the pipeline and apply the updated YAML manifest to the existing object.
+The Apply action allows us to modify existing objects by applying an updated manifest YAML - this can be useful in a GitOps scenario when we are using Git as the single source of truth for an application. In this case when a YAML file is updated, a [Git Trigger](/triggers/git) will start the pipeline and apply the updated YAML manifest to the existing object.
 
 If we take the `namespace` from in the Create task, `ns-01`, and want to update the `metadata` with a `label` we can apply an updated manifest:
 

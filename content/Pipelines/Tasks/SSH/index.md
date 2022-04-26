@@ -1,7 +1,7 @@
 ---
 title: "SSH"
 ---
-The SSH task is similar in many ways to the [CI](/Pipelines/Tasks/CI/) and [PowerShell](/Pipelines/Tasks/PowerShell/) tasks - it allows you to execute code on a remote machine, in this case over SSH. The task can authenticate with username and password, or a private key.
+The SSH task is similar in many ways to the [CI](/pipelines/tasks/ci) and [powershell](/pipelines/tasks/powershell) tasks - it allows you to execute code on a remote machine, in this case over SSH. The task can authenticate with username and password, or a private key.
 
 * **Host** - the IP or FQDN of the SSH host
 * **Username** - the username to authenticate to the SSH host 
@@ -14,7 +14,7 @@ The SSH task is similar in many ways to the [CI](/Pipelines/Tasks/CI/) and [Powe
 
 {{< img src="ssh-task-config.png" alt="An example SSH task configuration" >}}
 
-To use an SSH key to connect to the SSH host, the key must be a PEM encoded RSA key (it should start with `---BEGIN RSA PRIVATE KEY----`). It's recommended to generate a key specifically for CodeStream and store the key in a [Variable](/Configure/variables/). You can enter a passphrase for additional security.
+To use an SSH key to connect to the SSH host, the key must be a PEM encoded RSA key (it should start with `---begin rsa private key----`). it's recommended to generate a key specifically for codestream and store the key in a [variable](/configure/variables). You can enter a passphrase for additional security.
 
 The following example generates a key pair called `id_codestream`. It is executed on the SSH host under the user profile that will be used to connect (`autotmm`)
 
@@ -54,7 +54,7 @@ The contents of `id_codestream` can then be used in the SSH task (along with the
 {{< img src="ssh-task-key.png" alt="Using an SSH key to connect" >}}
 
 {{< hint warning >}}
-Secret [Variables](/Configure/Variables) should be used for authentication parameters to ensure they're kept secret and hidden from logs
+Secret [Variables](/configure/variables) should be used for authentication parameters to ensure they're kept secret and hidden from logs
 {{< /hint >}}
 
 ## Script Response File

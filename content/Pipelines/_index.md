@@ -20,15 +20,15 @@ When editing a Pipeline there are four tabs to configure:
 
 The workspace tab configures the environment in which the pipeline runs. 
 
-**Type** Tasks can execute on a [Kubernetes endpoint](/Configure/Endpoints/kubernetes) or a [Docker endpoint](/Configure/Endpoints/docker). Some configurations is common to both types of workspace, other parts are specific.
-* **Kubernetes API Endpoint** specifies a [Kubernetes endpoint](/Configure/Endpoints/kubernetes) on which [CI tasks](/Pipelines/Tasks/ci) and [Custom Integrations](/Custom-Integrations) will execute
-* **Host Endpoint** specifies a [Docker endpoint](/Configure/Endpoints/docker) on which [CI tasks](/Pipelines/Tasks/ci) and [Custom Integrations](/Custom-Integrations) will execute
+**Type** Tasks can execute on a [Kubernetes endpoint](/configure/endpoints/kubernetes) or a [Docker endpoint](/configure/endpoints/docker). Some configurations is common to both types of workspace, other parts are specific.
+* **Kubernetes API Endpoint** specifies a [Kubernetes endpoint](/configure/endpoints/kubernetes) on which [CI tasks](/pipelines/tasks/ci) and [Custom Integrations](/custom-integrations) will execute
+* **Host Endpoint** specifies a [Docker endpoint](/configure/endpoints/docker) on which [CI tasks](/pipelines/tasks/ci) and [Custom Integrations](/custom-integrations) will execute
 
 **Builder image URL** is common accross both workspace types and configures the container image that will be used for CI tasks or Custom Integrations. You can specify using the just an official image (e.g. `python`), the image and a tag (e.g. `python:3.10.0a6-alpine`) or a full URL (e.g. `projects.registry.vmware.com/antrea/prom-prometheus:v2.19.3`)
 
 {{< hint warning >}}The container image can be almost any image but it needs to have `wget` or `curl` in order to download and install the Code Stream CI Agent, which is installed when the container is spun up.{{< /hint >}}
 
-**Image Registry** selects the [Docker Registry endpoint](/Configure/Endpoints/Docker-Registry) to use to pull the **Builder image** - if the registry requires credentials to pull an image you can specify them as part of the endpoint and those will be used.
+**Image Registry** selects the [Docker Registry endpoint](/configure/endpoints/docker-registry) to use to pull the **Builder image** - if the registry requires credentials to pull an image you can specify them as part of the endpoint and those will be used.
 
 {{< hint info >}}
 #### Kubernetes workspace only
@@ -45,7 +45,7 @@ The following settings are available for the Kubernetes type workspace only
 {{< img src="images/kubernetes-workspace-options.png" alt="Kubernetes Workspace Options" >}}
 {{< /hint >}}
 
-**Working directory** is the directory within a container image that will be used when running commands (`workingDir`, by default) in a [CI task](/Pipelines/Tasks/ci) - more often than not, you can leave this blank to default to `/build`
+**Working directory** is the directory within a container image that will be used when running commands (`workingDir`, by default) in a [CI task](/pipelines/tasks/ci) - more often than not, you can leave this blank to default to `/build`
 
 **Cache** is accessible to each Pipeline run and can be used to cache files and folders that are common between Pipeline runs - for example if you download dependencies before building a Go project, those dependencies could be cached to speed up future executions of the same pipeline.
 
@@ -55,7 +55,7 @@ The following settings are available for the Kubernetes type workspace only
 
 **Memory limit** if a CI task requires significant resources, container's allocated Memory can be increased - it's not often required
 
-**Git clone** - if the pipeline is triggered by a [Git webhook](/Triggers/Git), [CI tasks](/Pipelines/Tasks/ci) will automatically clone the Git repository. {{< hint warning >}}
+**Git clone** - if the pipeline is triggered by a [Git webhook](/triggers/git), [CI tasks](/pipelines/tasks/ci) will automatically clone the Git repository. {{< hint warning >}}
 You will need to configure  Pipeline Inputs with the Git auto-inject parameters for automatic cloning to work{{< /hint >}}
 
 {{< img src="/images/pipeline-workspace-config.png" alt="Pipeline Workspace Configuration" >}}
@@ -67,13 +67,13 @@ You will need to configure  Pipeline Inputs with the Git auto-inject parameters 
 {{< tab "Model" >}}
 The Model tab is where you configure the Stages and Tasks of the pipeline - it's where you spend most of your time when creating and editing pipelines.
 
-- A [Stage](/Pipelines/Stages) is an encapsulation mechanism for tasks and are used for grouping the individual task execution statuses and results. 
-- A [Task](/Pipelines/Tasks) performs individual actions based on its type and configuration.  Tasks can deploy [VMware Cloud Templates](Tasks/cloudtemplate), and perform actions on configured endpoints, or more generic tasks such as prompting for user interations with [User Operation](/User-Operations), polling a 3rd party data source with the [Poll](/Pipelines/Tasks/poll/) task, or even perform a REST call.
+- A [Stage](/pipelines/stages) is an encapsulation mechanism for tasks and are used for grouping the individual task execution statuses and results. 
+- A [Task](/pipelines/tasks) performs individual actions based on its type and configuration.  Tasks can deploy [VMware Cloud Templates](tasks/cloudtemplate), and perform actions on configured endpoints, or more generic tasks such as prompting for user interations with [User Operation](/user-operations), polling a 3rd party data source with the [Poll](/pipelines/tasks/poll) task, or even perform a REST call.
 
 {{< img src="/images/pipeline-model-config.png" alt="Pipeline Model Configuration" >}}
 {{< /tab >}}
 {{< tab "Output" >}} 
-Outputs can be mapped to values produced by tasks in a pipeline and can be useful when you're nesting pipelines using the [Pipeline task](/Pipelines/Tasks/pipeline) to return the results to the parent pipeline.
+Outputs can be mapped to values produced by tasks in a pipeline and can be useful when you're nesting pipelines using the [Pipeline task](/pipelines/tasks/pipeline) to return the results to the parent pipeline.
 
 {{< img src="/images/pipeline-output-config.png" alt="Pipeline Output Configuration" >}}
 {{< /tab >}}
@@ -93,7 +93,7 @@ Tasks return their output as JSON, and it's often useful to look at a previously
 
 ## Notifications
 
-The notifications tab allows you to configure notifications for pipeline events (completion, waiting for [user interaction](), failure, cancellation, and starting) using either an [Email endpoint](/Configure/Endpoints/email), [Jira endpoint](/Configure/Endpoints/jira), or by creating a Webhook with a POST, PUT or PATCH payload.
+The notifications tab allows you to configure notifications for pipeline events (completion, waiting for [user interaction](), failure, cancellation, and starting) using either an [Email endpoint](/configure/endpoints/email), [Jira endpoint](/configure/endpoints/jira), or by creating a Webhook with a POST, PUT or PATCH payload.
 
 {{< tabs "Notification Types" >}}
 {{< tab Email >}}
@@ -108,8 +108,8 @@ The notifications tab allows you to configure notifications for pipeline events 
 {{< /tabs >}}
 
 You can create a rich user experience with HTML templates, or custom formatting in your notifications:
-* [Creating HTML email templates for vRealize Automation Code Stream](https://blog.v12n.io/creating-html-email-templates-for-vrealize-code-stream/)
-* [Creating Slack Notifications](/Getting-Started/Slack-Notifications/)
+* [Creating HTML email templates for vRealize Automation Code Stream](https://blog.v12n.io/creating-html-email-templates-for-vrealize-code-stream)
+* [Creating Slack Notifications](/getting-started/slack-notifications)
 
 
 ### Reference

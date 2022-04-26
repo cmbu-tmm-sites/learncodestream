@@ -14,7 +14,7 @@ The Poll task is most commonly used in combination with the REST task to Poll fo
 ### Exit Criteria
 
 * **Success Condition** - if this evaluates to `true` then the task will return a success, and the pipeline will continue.
-* **Failure Condition** - if this evaluates to `true` then the task will return a failure, and the pipeline will halt (unless [Continue on failure](/Pipelines/Tasks/#precondition-and-continue-on-failure) is checked)
+* **Failure Condition** - if this evaluates to `true` then the task will return a failure, and the pipeline will halt (unless [Continue on failure](/pipelines/tasks/#precondition-and-continue-on-failure) is checked)
 
 For example, the below Poll task is configured to query the status of an Image Enumeration task in Cloud Assembly, and wait for either a status of `FINISHED` or `FAILED`. 
 

@@ -2,7 +2,7 @@
 title: "Email"
 ---
 
-The Email endpoint provides configuration for sending [Pipeline Notifications](/Pipelines/#notifications), [Task Notifications](/Pipelines/Tasks/#task-notifications), and [User Operation](/User-Operations) notifications.
+The Email endpoint provides configuration for sending [Pipeline Notifications](/pipelines/#notifications), [Task Notifications](/pipelines/tasks/#task-notifications), and [User Operation](/user-operations) notifications.
 
 * **Project** - endpoints are assigned to a Project to provide scope of access
 * **Type** - Email
@@ -22,5 +22,5 @@ The Email endpoint provides configuration for sending [Pipeline Notifications](/
 
 {{< hint warning >}}
 * You can validate the configuration using the VALIDATE button.
-* You should create [Secret Variables](/Configure/Variables/) to store your user credentials.
+* You should create [Secret Variables](/configure/variables) to store your user credentials.
 {{< /hint >}}

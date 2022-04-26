@@ -3,7 +3,7 @@ title: "Jira"
 icon: "notification"
 ---
 
-The Jira endpoint provides configuration for sending [Pipeline Notifications](/Pipelines/#notifications) and [Task Notifications](/Pipelines/Tasks/#task-notifications).
+The Jira endpoint provides configuration for sending [Pipeline Notifications](/pipelines/#notifications) and [Task Notifications](/pipelines/tasks/#task-notifications).
 
 * **Project** - endpoints are assigned to a Project to provide scope of access
 * **Type** - Jira
@@ -20,5 +20,5 @@ The Jira endpoint provides configuration for sending [Pipeline Notifications](/P
 {{< hint warning >}}
 * When adding an endpoint URL you'll be prompted to view and accept the certificate.
 * You can validate the configuration using the VALIDATE button.
-* You should create [Secret Variables](/Configure/Variables/) to store your user credentials.
+* You should create [Secret Variables](/configure/variables) to store your user credentials.
 {{< /hint >}}
