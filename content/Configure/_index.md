@@ -3,4 +3,6 @@ title: "Configure"
 weight: 700
 ---
 
-<!-- toc-tree -->
+The Configure section allows you to create and manage Projects, Endpoints and Variables
+
+## In this section
